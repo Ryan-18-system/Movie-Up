@@ -4,8 +4,9 @@
   width: 100%;
   color: white;
   font-family: 'Open Sans', sans-serif;
-  padding:5px 0 5px 0;
-  font-size: 15px;
+  padding: 1px ;
+  font-size: 12px;
+  position: fixed;
 }
 
 
