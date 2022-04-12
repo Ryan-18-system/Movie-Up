@@ -7,6 +7,9 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
 import {MenuComponent} from "./menu/menu.component";
 import {MatButtonModule} from "@angular/material/button";
+import {MatMenuModule} from "@angular/material/menu";
+
+
 
 
 @NgModule({
@@ -20,12 +23,13 @@ import {MatButtonModule} from "@angular/material/button";
         MenuComponent,
         HomeComponent
     ],
-    imports: [
-        CommonModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatCardModule,
-        MatButtonModule
-    ]
+  imports: [
+    CommonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatButtonModule,
+    MatMenuModule,
+  ]
 })
 export class LayoutModule { }
