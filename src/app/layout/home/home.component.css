@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+.text-section{
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-left: 70px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #7100A7;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cards-fav{
+  margin-left: 70px;
+}
+
+.favoritos{
+  width: 450px;
+  display: inline-block;
+}
+
+.cards-emalta{
+  margin-left: 70px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.emalta{
+  min-width: 300px;
+  display: inline-block;
+}
