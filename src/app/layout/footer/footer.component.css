@@ -1,0 +1,13 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  padding:5px 0 5px 0;
+  font-size: 15px;
+
+}
+
+
