@@ -15,8 +15,15 @@
 }
 
 .favoritos{
-  width: 450px;
+  width: 460px;
   display: inline-block;
+}
+
+.favoritos img{
+  width: 450px;
+  height: 300px;
+  margin-left: 10px;
+
 }
 
 .cards-emalta{
@@ -29,4 +36,18 @@
 .emalta{
   min-width: 300px;
   display: inline-block;
+}
+
+@media (max-width: 1445px)
+{
+  .favoritos
+   {
+    width: 350px;
+   }
+
+   .favoritos img{
+    width: 350px;
+    height: 200px;
+   }
+
 }
