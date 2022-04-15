@@ -1,11 +1,10 @@
 <div class="login-contaniner" fxLayout="column" fxLayoutAlign="center center">
   <h2>Login</h2>
-  <mat-form-field appearance="fill" class="name-form" >
+  <mat-form-field appearance="outline" class="name-form" >
     <mat-label>Digite seu Nome</mat-label>
     <input matInput>
-
   </mat-form-field>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-label>Enter your password</mat-label>
     <input matInput [type]="hide ? 'password' : 'text'">
     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
