@@ -1,12 +1,12 @@
 <mat-toolbar color="primary" class="menu">
-  <img src="/assets/logomovie.png" alt="" class="logo" />
+  <img src="/assets/logomovie.png" alt="" class="logo" [routerLink]="['/']" />
   <div class="loc">
     <mat-icon>room icon</mat-icon>
     <p>localização/CEP</p>
   </div>
 
   <div class="navbar">
-    <button mat-button class="menu-text" [matMenuTriggerFor]="filmes">FILMES</button>
+    <button [routerLink]="['/filmes']" mat-button class="menu-text" [matMenuTriggerFor]="filmes" >FILMES</button>
     <mat-menu #filmes="matMenu">
       <button mat-menu-item>Filmes da Semana</button>
       <button mat-menu-item>Aclamados pela Crítica</button>
@@ -32,7 +32,7 @@
     </mat-menu>
   </div>
   <button mat-button class="menu-text">FAVORITOS</button>
-  <button mat-icon-button >
+  <button mat-icon-button [routerLink]="['/login']" >
     <mat-icon>person</mat-icon>
   </button>
 
