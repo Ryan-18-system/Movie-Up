@@ -1,0 +1,35 @@
+<div class="img-logo" fxLayout="column" fxLayoutAlign="center center">
+  <img src="assets/logomovie.png" width="80" height="100">
+  <h3>Cadastro</h3>
+</div>
+<div  class="cadastro-user" fxLayout="column" fxLayoutAlign="center center">
+  <mat-form-field appearance="outline">
+    <mat-label>Digite seu Nome Completo</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field hintLabel="Digite Apenas Números" appearance="outline">
+    <mat-label>Digite seu CEP</mat-label>
+    <input matInput #input maxlength="8" placeholder="ex: 58014150">
+    <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Selecione sua Categoria</mat-label>
+    <mat-select>
+      <mat-option value="comum">Usuário Comum</mat-option>
+      <mat-option value="critico">Crítico de Cinema</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Digite seu Email</mat-label>
+    <input matInput placeholder="user@example.com" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Digite sua Senha</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-flat-button color="accent">Cadastrar</button>
+</div>
