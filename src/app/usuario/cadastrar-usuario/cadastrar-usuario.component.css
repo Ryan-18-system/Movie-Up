@@ -1,0 +1,20 @@
+.cadastro-user{
+  margin: 50px 30px 40px 30px;
+  padding-bottom: 5px;
+}
+.cadastro-user mat-form-field{
+  padding-top: 2px;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+.img-logo h3{
+  font-size: 25px;
+  color: whitesmoke;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+input {
+  color: whitesmoke;
+}
+mat-label{
+  color: whitesmoke;
+}
+

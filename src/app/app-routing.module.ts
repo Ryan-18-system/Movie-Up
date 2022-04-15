@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListarFilmesComponent } from './filme/listar-filmes/listar-filmes.component';
 import {HomeComponent} from "./layout/home/home.component";
 import {LoginComponent} from "./login/login/login.component";
+import {CadastrarUsuarioComponent} from "./usuario/cadastrar-usuario/cadastrar-usuario.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'filmes',
     component: ListarFilmesComponent
+  },
+  {
+    path:'cadastrarusuario',
+    component: CadastrarUsuarioComponent
   }
 ];
 
