@@ -32,8 +32,13 @@
     </mat-menu>
   </div>
   <button mat-button class="menu-text">FAVORITOS</button>
-  <button mat-icon-button [routerLink]="['/login']" >
+  <button mat-icon-button  [matMenuTriggerFor]="menuUsuario"  >
     <mat-icon>person</mat-icon>
+    <mat-menu #menuUsuario="matMenu">
+      <button mat-menu-item>Meu Perfil</button>
+      <button mat-menu-item [routerLink]="['/login']">Login</button>
+      <button mat-menu-item [routerLink]="['/cadastrarusuario']" >Cadastrar-se</button>
+    </mat-menu>
   </button>
 
 </mat-toolbar>
