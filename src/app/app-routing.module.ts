@@ -1,3 +1,6 @@
+import { MaisEsperadosComponent } from './filme/mais-esperados/mais-esperados.component';
+import { AclamadosPelaCriticaComponent } from './filme/aclamados-pela-critica/aclamados-pela-critica.component';
+import { FilmesDaSemanaComponent } from './filme/filmes-da-semana/filmes-da-semana.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListarFilmesComponent } from './filme/listar-filmes/listar-filmes.component';
@@ -15,13 +18,25 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path:'cadastrarusuario',
+    component: CadastrarUsuarioComponent
+  },
+  {
     path:'filmes',
     component: ListarFilmesComponent
   },
   {
-    path:'cadastrarusuario',
-    component: CadastrarUsuarioComponent
-  }
+    path:'filmes-da-semana',
+    component: FilmesDaSemanaComponent
+  },
+  {
+    path:'aclamados-pela-critica',
+    component: AclamadosPelaCriticaComponent
+  },
+  {
+    path:'mais-esperados',
+    component: MaisEsperadosComponent
+  },
 ];
 
 @NgModule({
