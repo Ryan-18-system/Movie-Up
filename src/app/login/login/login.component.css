@@ -1,7 +1,11 @@
 
-.login-contaniner{
+.login-container{
   margin: 50px 20px 120px 20px;
   border-radius: 10px;
+}
+h2{
+  font-family: 'Montserrat', sans-serif;
+
 }
 .name-form{
   padding: 20px 65px 20px 65px;
@@ -15,6 +19,14 @@ mat-form-field{
   display: flex;
   flex-direction: row;
 }
+
+input {
+  color: white;
+}
+mat-label{
+  color: white;
+}
+
 .button-logar{
   border-radius: 5px;
   margin: 10px 0 20px 0;

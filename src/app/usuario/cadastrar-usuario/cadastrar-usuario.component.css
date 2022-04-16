@@ -7,10 +7,16 @@
   font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
 .img-logo h3{
-  font-size: 25px;
+  margin-top: 20px;
+  font-size: 22px;
   color: whitesmoke;
   font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
+
+.input-cadastro{
+  width: 300px;
+}
+
 input {
   color: whitesmoke;
 }
