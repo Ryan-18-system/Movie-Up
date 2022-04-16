@@ -1,8 +1,10 @@
-<form class="form-search">
-  <input type="search"class="form-control rounded search" placeholder="Buscar filmes e séries" />
-</form>
-
-<h1 class="text-section">Favoritos da Semana</h1>
+<div class="form-search">
+  <mat-form-field appearance="fill" class="search"  >
+    <mat-label>Buscar Filmes</mat-label>
+    <input matInput>
+  </mat-form-field>
+</div>
+<h1 class="text-section" [routerLink]="['/filmes-da-semana']">Filmes da Semana</h1>
 <div fxLayout="row" fxLayoutAlign="center none" class="cards">
   <div class="filmes">
     <img src="https://www.themoviedb.org/t/p/original/725WE0Qb1BbUF7aGvjiQqzzffpg.jpg" width="280" height="300">
@@ -14,7 +16,7 @@
 
 </div>
 
-<h1 class="text-section">Aclamados pela Crítica</h1>
+<h1 class="text-section" [routerLink]="['/aclamados-pela-critica']">Aclamados pela Crítica</h1>
 <div fxLayout="row" fxLayoutAlign="center none" class="cards">
   <div class="filmes">
     <img src="https://www.themoviedb.org/t/p/original/725WE0Qb1BbUF7aGvjiQqzzffpg.jpg" width="280" height="300">
@@ -32,7 +34,7 @@
 
 </div>
 
-<h1 class="text-section">Mais Esperados do Ano</h1>
+<h1 class="text-section" [routerLink]="['/mais-esperados']">Mais Esperados do Ano</h1>
 <div fxLayout="row" fxLayoutAlign="center none" class="cards">
   <div class="filmes">
     <img src="https://www.themoviedb.org/t/p/original/725WE0Qb1BbUF7aGvjiQqzzffpg.jpg" width="280" height="300">

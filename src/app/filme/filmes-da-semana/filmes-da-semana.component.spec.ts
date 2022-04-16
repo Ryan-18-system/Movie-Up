@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FavoritosDaSemanaComponent } from './favoritos-da-semana.component';
+import { FilmesDaSemanaComponent } from './filmes-da-semana.component';
 
-describe('FavoritosDaSemanaComponent', () => {
-  let component: FavoritosDaSemanaComponent;
-  let fixture: ComponentFixture<FavoritosDaSemanaComponent>;
+describe('FilmesDaSemanaComponent', () => {
+  let component: FilmesDaSemanaComponent;
+  let fixture: ComponentFixture<FilmesDaSemanaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FavoritosDaSemanaComponent ]
+      declarations: [ FilmesDaSemanaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FavoritosDaSemanaComponent);
+    fixture = TestBed.createComponent(FilmesDaSemanaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
