@@ -1,42 +1,19 @@
-
-.login-container{
-  margin: 50px 20px 120px 20px;
-  border-radius: 10px;
+.login-user{
+  margin: 50px 30px 40px 30px;
+  padding-bottom: 5px;
 }
-h2{
-  font-family: 'Montserrat', sans-serif;
-
+.login-user mat-form-field{
+  padding-top: 2px;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
-.name-form{
-  padding: 20px 65px 20px 65px;
+.img-logo h3{
+  margin-top: 20px;
+  font-size: 22px;
+  color: whitesmoke;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
-mat-form-field{
-  background-color:#7100A7;
-  color: white;
-  padding: 20px 50px 20px 50px;
-  border-radius: 10px;
-  margin: 20px 50px 20px 50px;
-  display: flex;
-  flex-direction: row;
+.input-cadastro{
+  width: 300px;
+  color: whitesmoke;
 }
 
-input {
-  color: white;
-}
-mat-label{
-  color: white;
-}
-
-.button-logar{
-  border-radius: 5px;
-  margin: 10px 0 20px 0;
-  background-color: white;
-  color: #7100A7;
-  padding: 10px 120px 10px 120px;
-  font-size: 18px;
-}
-h2{
-  margin-top: 30px;
-  color: white;
-  text-align: center;
-}
