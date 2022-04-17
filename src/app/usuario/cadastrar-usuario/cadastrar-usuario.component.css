@@ -15,11 +15,9 @@
 
 .input-cadastro{
   width: 300px;
-}
-
-input {
   color: whitesmoke;
 }
+
 mat-label{
   color: whitesmoke;
 }

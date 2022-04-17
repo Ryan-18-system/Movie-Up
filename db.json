@@ -1,0 +1,22 @@
+{
+  "criticas": [
+    {
+      "id": 1,
+      "nome": "Usuario1",
+      "mensagem": "mensagem",
+      "titulo": "Titulo do Filme"
+    },
+    {
+      "id": 2,
+      "nome": "Usuario2",
+      "mensagem": "mensagem",
+      "titulo": "Titulo do Filme"
+    },
+    {
+      "id": 3,
+      "nome": "Usuario3",
+      "mensagem": "mensagem",
+      "titulo": "Titulo do Filme"
+    }
+  ]
+}
