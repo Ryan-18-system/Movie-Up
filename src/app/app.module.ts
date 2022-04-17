@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {LayoutModule} from "./layout/layout.module";
@@ -11,6 +11,8 @@ import {FilmeModule} from "./filme/filme.module";
 import {SerieModule} from "./serie/serie.module";
 import {CinemaModule} from "./cinema/cinema.module";
 import {FavoritosModule} from "./favoritos/favoritos.module";
+import { CriticaModule } from './critica/critica.module';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import {FavoritosModule} from "./favoritos/favoritos.module";
         FilmeModule,
         SerieModule,
         CinemaModule,
-        FavoritosModule
+        FavoritosModule,
+        CriticaModule,
+        HttpClientModule,
+
     ],
   providers: [],
   bootstrap: [AppComponent]

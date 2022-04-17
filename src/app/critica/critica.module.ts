@@ -1,3 +1,5 @@
+import { MatGridListModule } from '@angular/material/grid-list';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CadastrarCriticaComponent } from './cadastrar-critica/cadastrar-critica.component';
@@ -24,6 +26,8 @@ import { MatCardModule } from '@angular/material/card';
     FormsModule,
     MatIconModule,
     MatButtonModule,
+    RouterModule,
+    MatGridListModule
   ],
   exports: [ CadastrarCriticaComponent,
     ListarCriticaComponent]

@@ -1,0 +1,10 @@
+.cards{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.mat-card-listagem{
+  max-width: 400px;
+  background-color:#7100A7;
+  margin: auto;
+  margin-top: 5px;
+}

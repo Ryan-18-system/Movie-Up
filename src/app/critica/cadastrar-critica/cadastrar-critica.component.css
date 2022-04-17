@@ -1,0 +1,34 @@
+.card-insercao{
+  max-width: 500px;
+  background-color:#7100A7;
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+.title-card{
+  margin-left: 130px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 300px;
+}
+
+.mat-form-simples {
+  margin-left:5px;
+}
+
+.text-button{
+  color: white;
+}
+.button-section{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 50px;
+}

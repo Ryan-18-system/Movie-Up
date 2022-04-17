@@ -1,3 +1,5 @@
+import { CadastrarCriticaComponent } from './critica/cadastrar-critica/cadastrar-critica.component';
+import { ListarCriticaComponent } from './critica/listar-critica/listar-critica.component';
 import { MaisEsperadosComponent } from './filme/mais-esperados/mais-esperados.component';
 import { AclamadosPelaCriticaComponent } from './filme/aclamados-pela-critica/aclamados-pela-critica.component';
 import { FilmesDaSemanaComponent } from './filme/filmes-da-semana/filmes-da-semana.component';
@@ -36,6 +38,14 @@ const routes: Routes = [
   {
     path:'mais-esperados',
     component: MaisEsperadosComponent
+  },
+  {
+    path:'listar-critica',
+    component: ListarCriticaComponent
+  },
+  {
+    path:'cadastrar-critica',
+    component: CadastrarCriticaComponent
   },
 ];
 
