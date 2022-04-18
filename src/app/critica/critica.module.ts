@@ -11,24 +11,26 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
     CadastrarCriticaComponent,
     ListarCriticaComponent
   ],
-  imports: [
-    BrowserAnimationsModule,
-    CommonModule,
-    MatCardModule,
-    MatInputModule,
-    MatFormFieldModule,
-    FormsModule,
-    MatIconModule,
-    MatButtonModule,
-    RouterModule,
-    MatGridListModule
-  ],
+    imports: [
+        BrowserAnimationsModule,
+        CommonModule,
+        MatCardModule,
+        MatInputModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatIconModule,
+        MatButtonModule,
+        RouterModule,
+        MatGridListModule,
+        MatSelectModule
+    ],
   exports: [ CadastrarCriticaComponent,
     ListarCriticaComponent]
 })

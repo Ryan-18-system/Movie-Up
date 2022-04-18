@@ -32,3 +32,11 @@
   margin: auto;
   margin-bottom: 50px;
 }
+.mat-card-footer-grid{
+  display: grid;
+  align-items: center;
+
+}
+.button-footer{
+  margin: auto;
+}
