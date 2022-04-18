@@ -5,18 +5,25 @@
   </mat-card-header>
 
   <mat-card-content class="content">
+    <mat-form-field appearance="outline" class="input-cadastro">
+      <mat-label>Selecione a Categoria da Crítica</mat-label>
+      <mat-select>
+        <mat-option value="serie">Série</mat-option>
+        <mat-option value="filme">Filme</mat-option>
+      </mat-select>
+    </mat-form-field>
     <mat-form-field class="mat-form-simples">
-      <mat-label>Nome</mat-label>
-      <input matInput [(ngModel)]="critica.nome" placeholder="Digite seu nome">
+      <mat-label>Nome da Obra</mat-label>
+      <input matInput [(ngModel)]="critica.titulo" placeholder="Digite o nome da obra" type="search">
     </mat-form-field>
     <mat-form-field  class="mat-form-simples">
       <mat-label>Avaliar</mat-label>
-      <textarea matInput [(ngModel)]="critica.mensagem" placeholder="Escreva sua critica"></textarea>
+      <textarea matInput [(ngModel)]="critica.mensagem" placeholder="Escreva sua critica"  maxlength="100"></textarea>
     </mat-form-field>
 
   </mat-card-content>
-  <mat-card-footer align="center">
-    <button mat-stroked-button color="white" (click)="inserir()">
+  <mat-card-footer class="mat-card-footer-grid">
+    <button mat-stroked-button color="white" (click)="inserir()" class="button-footer" >
       AVALIAR
     </button>
   </mat-card-footer>
@@ -25,8 +32,5 @@
 <div class="button-section">
   <button mat-stroked-button [routerLink]="['/listar-critica']" class="text-button">
     MOSTRAR TODAS AS CRÍTICAS
-  </button>
-  <button mat-stroked-button class="text-button">
-    AVALIAR OUTRO TÍTULO
   </button>
 </div>

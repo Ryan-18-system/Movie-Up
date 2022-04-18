@@ -1,10 +1,31 @@
 .cards{
   margin-top: 50px;
   margin-bottom: 50px;
+
 }
 .mat-card-listagem{
-  max-width: 400px;
+  width: 400px;
+  height: 400px;
   background-color:#7100A7;
   margin: auto;
-  margin-top: 5px;
+  margin-top: 10px;
+  padding: 10px;
+}
+mat-card-header{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.lixo{
+  margin-bottom: 50px;
+}
+.img-filme{
+  display: grid;
+  align-items: center;
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+.critica{
+  margin-bottom: 50px;
 }
