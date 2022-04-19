@@ -1,3 +1,4 @@
+import { ListarSeriesComponent } from './serie/listar-series/listar-series.component';
 import { CadastrarCriticaComponent } from './critica/cadastrar-critica/cadastrar-critica.component';
 import { ListarCriticaComponent } from './critica/listar-critica/listar-critica.component';
 import { MaisEsperadosComponent } from './filme/mais-esperados/mais-esperados.component';
@@ -9,6 +10,7 @@ import { ListarFilmesComponent } from './filme/listar-filmes/listar-filmes.compo
 import {HomeComponent} from "./layout/home/home.component";
 import {LoginComponent} from "./login/login/login.component";
 import {CadastrarUsuarioComponent} from "./usuario/cadastrar-usuario/cadastrar-usuario.component";
+import {DetalheComponent} from "./detalhe/detalhe.component";
 
 const routes: Routes = [
   {
@@ -47,6 +49,14 @@ const routes: Routes = [
     path:'cadastrar-critica',
     component: CadastrarCriticaComponent
   },
+  {
+    path:'series',
+    component: ListarSeriesComponent
+  },
+  {
+    path:'detalhe',
+    component: DetalheComponent
+  }
 ];
 
 @NgModule({

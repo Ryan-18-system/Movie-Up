@@ -12,11 +12,13 @@ import {SerieModule} from "./serie/serie.module";
 import {CinemaModule} from "./cinema/cinema.module";
 import {FavoritosModule} from "./favoritos/favoritos.module";
 import { CriticaModule } from './critica/critica.module';
-
+import { DetalheComponent } from './detalhe/detalhe.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DetalheComponent
   ],
     imports: [
         BrowserModule,
@@ -31,6 +33,8 @@ import { CriticaModule } from './critica/critica.module';
         FavoritosModule,
         CriticaModule,
         HttpClientModule,
+        MatCardModule,
+
 
     ],
   providers: [],
