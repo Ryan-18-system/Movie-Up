@@ -1,3 +1,4 @@
+import { ListarSeriesComponent } from './serie/listar-series/listar-series.component';
 import { CadastrarCriticaComponent } from './critica/cadastrar-critica/cadastrar-critica.component';
 import { ListarCriticaComponent } from './critica/listar-critica/listar-critica.component';
 import { MaisEsperadosComponent } from './filme/mais-esperados/mais-esperados.component';
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path:'cadastrar-critica',
     component: CadastrarCriticaComponent
+  },
+  {
+    path:'series',
+    component: ListarSeriesComponent
   },
 ];
 

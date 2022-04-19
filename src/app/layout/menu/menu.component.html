@@ -12,7 +12,7 @@
       <button mat-menu-item [routerLink]="['/aclamados-pela-critica']">Aclamados pela Crítica</button>
       <button mat-menu-item [routerLink]="['/mais-esperados']">Mais esperados do Ano</button>
     </mat-menu>
-    <button mat-button class="menu-text" [matMenuTriggerFor]="serie">SÉRIES</button>
+    <button [routerLink]="['/series']" mat-button class="menu-text" [matMenuTriggerFor]="serie">SÉRIES</button>
     <mat-menu #serie="matMenu">
       <button mat-menu-item>Em alta</button>
       <button mat-menu-item>Vencedoras do Emmy</button>
