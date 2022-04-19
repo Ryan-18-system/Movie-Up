@@ -1,0 +1,37 @@
+.detalhe{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.sinopse{
+  padding-top: 10px;
+
+}
+.informacoes{
+
+  display: flex;
+  flex-direction: row;
+}
+img{
+  padding-right: 10px;
+}
+.mat-card-listagem{
+  width: 480px;
+  height: 480px;
+  background-color:#320443;
+  margin-left: 20px ;
+  margin-top: 10px;
+  padding: 10px;
+}
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa{
+  font-size: 1.5em
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
