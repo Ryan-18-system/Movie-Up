@@ -16,7 +16,8 @@ import {MatSelectModule} from "@angular/material/select";
 @NgModule({
   declarations: [
     CadastrarCriticaComponent,
-    ListarCriticaComponent
+    ListarCriticaComponent,
+
   ],
     imports: [
         BrowserAnimationsModule,
@@ -29,7 +30,9 @@ import {MatSelectModule} from "@angular/material/select";
         MatButtonModule,
         RouterModule,
         MatGridListModule,
-        MatSelectModule
+        MatSelectModule,
+
+
     ],
   exports: [ CadastrarCriticaComponent,
     ListarCriticaComponent]

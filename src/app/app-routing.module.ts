@@ -10,6 +10,7 @@ import { ListarFilmesComponent } from './filme/listar-filmes/listar-filmes.compo
 import {HomeComponent} from "./layout/home/home.component";
 import {LoginComponent} from "./login/login/login.component";
 import {CadastrarUsuarioComponent} from "./usuario/cadastrar-usuario/cadastrar-usuario.component";
+import {DetalheComponent} from "./detalhe/detalhe.component";
 
 const routes: Routes = [
   {
@@ -52,6 +53,10 @@ const routes: Routes = [
     path:'series',
     component: ListarSeriesComponent
   },
+  {
+    path:'detalhe',
+    component: DetalheComponent
+  }
 ];
 
 @NgModule({

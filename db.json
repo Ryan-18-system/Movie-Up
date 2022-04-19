@@ -27,6 +27,36 @@
       "nome": "Renata Albuquerque",
       "mensagem": "Filmaço, dígno de cinema",
       "titulo": "Titulo do Filme"
+    },
+    {
+      "titulo": "Rapunzel ",
+      "mensagem": "Filmaço do caralho",
+      "id": 5
+    },
+    {
+      "nome": "Ryanzinho",
+      "titulo": "Flash",
+      "mensagem": "Horripilante de ruim",
+      "id": 6
+    },
+    {
+      "nome": "Ryan",
+      "titulo": "Pinoquio",
+      "mensagem": "Muito bom",
+      "id": 7
+    }
+  ],
+  "detalhes": [
+    {
+      "id": 1,
+      "titulo": "Homem aranha",
+      "imagem": "https://image.tmdb.org/t/p/original/fVzXp3NwovUlLe7fvoRynCmBPNc.jpg",
+      "dataLancamento": 2021,
+      "sinopse": "Após os acontecimentos de Homem-Aranha: Longe de Casa, o mundo acaba sabendo a real identidade do Homem-Aranha, além de acharem que foi ele quem matou Mysterio. Peter acaba pedindo ajuda para o Doutor Estranho para que ele apague essa informação de sua identidade secreta do mundo, mas o feitiço da errado e estranhamente, vilões de outras versões do Homem-Aranha de outros universos acabam indo para seu mundo, dificultando a vida de Peter.",
+      "genero": "Ação",
+      "diretor": "Teste 3",
+      "atores": "Tom Rola, Zendaya, Gordo chinês",
+      "duracao": 120
     }
   ]
 }
