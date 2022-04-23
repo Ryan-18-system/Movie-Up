@@ -41,4 +41,23 @@ mat-label{
 .filmes{
   min-width: 300px;
   display: inline-block;
+  color: blueviolet;
+  background-color: white;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+.footer-card{
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.footer-card span{
+  margin-left: 5px;
+}
+
+.fav-icon{
+  margin-right: 5px;
+  margin-bottom: 50px;
 }

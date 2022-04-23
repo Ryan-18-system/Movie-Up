@@ -1,3 +1,5 @@
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardImage, MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
@@ -29,6 +31,8 @@ import { FilmesDaSemanaComponent } from './filmes-da-semana/filmes-da-semana.com
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
+    MatCardModule,
+    MatIconModule
 
   ],
 
