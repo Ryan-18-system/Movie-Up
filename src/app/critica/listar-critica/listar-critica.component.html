@@ -1,10 +1,11 @@
+<h1 class="title-card">ÚLTIMAS AVALIAÇÕES</h1>
 <mat-grid-list cols="2" rowHeight="2:1" class="cards">
         <mat-grid-tile *ngFor="let critica of criticas" >
           <mat-card class="mat-card-listagem">
           <mat-card-header>
                     <mat-card-title>
                       <mat-icon>person</mat-icon>
-                      {{critica.nome}}
+                      <span class="user-name">{{critica.nome}}</span>
                     </mat-card-title>
                     <mat-card-subtitle>
                       {{critica.titulo}}
