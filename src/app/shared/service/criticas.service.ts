@@ -23,4 +23,9 @@ export class CriticasService {
   inserirCritica(critica: Critica): Observable<Critica> {
     return this.httpClient.post<Critica>(this.URL_CRITICAS, critica);
   }
+
+  //delete
+  remover(id: number): Observable<Object>{
+    return this.httpClient.delete(`${this.URL_CRITICAS}/${id}`);
+  }
 }
