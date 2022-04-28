@@ -10,6 +10,8 @@ import { BuscarFilmesComponent } from './buscar-filmes/buscar-filmes.component';
 import { AclamadosPelaCriticaComponent } from './aclamados-pela-critica/aclamados-pela-critica.component';
 import { MaisEsperadosComponent } from './mais-esperados/mais-esperados.component';
 import { FilmesDaSemanaComponent } from './filmes-da-semana/filmes-da-semana.component';
+import {MatIconModule} from "@angular/material/icon";
+import {MatCardModule} from "@angular/material/card";
 
 
 
@@ -29,6 +31,8 @@ import { FilmesDaSemanaComponent } from './filmes-da-semana/filmes-da-semana.com
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
+    MatCardModule,
 
   ],
 

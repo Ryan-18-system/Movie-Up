@@ -8,6 +8,7 @@
   <div class="navbar">
     <button [routerLink]="['/filmes']" mat-button class="menu-text" [matMenuTriggerFor]="filmes" >FILMES</button>
     <mat-menu #filmes="matMenu">
+      <button mat-menu-item [routerLink]="['/buscarfilme']">Buscar Filmes</button>
       <button mat-menu-item [routerLink]="['/filmes-da-semana']">Filmes da Semana</button>
       <button mat-menu-item [routerLink]="['/aclamados-pela-critica']">Aclamados pela Crítica</button>
       <button mat-menu-item [routerLink]="['/mais-esperados']">Mais esperados do Ano</button>

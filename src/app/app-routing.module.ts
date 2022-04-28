@@ -11,6 +11,8 @@ import {HomeComponent} from "./layout/home/home.component";
 import {LoginComponent} from "./login/login/login.component";
 import {CadastrarUsuarioComponent} from "./usuario/cadastrar-usuario/cadastrar-usuario.component";
 import {DetalheComponent} from "./detalhe/detalhe.component";
+import {AddFavoritosComponent} from "./favoritos/add-favoritos/add-favoritos.component";
+import {BuscarFilmesComponent} from "./filme/buscar-filmes/buscar-filmes.component";
 
 const routes: Routes = [
   {
@@ -56,6 +58,14 @@ const routes: Routes = [
   {
     path:'detalhe',
     component: DetalheComponent
+  },
+  {
+    path: 'favoritos',
+    component: AddFavoritosComponent
+  },
+  {
+    path: 'buscarfilme',
+    component: BuscarFilmesComponent
   }
 ];
 
