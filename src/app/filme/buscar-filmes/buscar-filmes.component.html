@@ -1,0 +1,16 @@
+<div class="form-search">
+  <mat-form-field appearance="fill" class="search"  >
+    <mat-label>Buscar Filmes</mat-label>
+    <div class="busca">
+      <input matInput #filme >
+      <button (click)="buscarFilme(filme.value)"><mat-icon>search</mat-icon></button>
+    </div>
+  </mat-form-field>
+  <mat-card *ngFor="let filme of filmes" class="mat-card">
+       <mat-card-title class="titulo">{{filme.titulo}}</mat-card-title>
+       <mat-card-content class="imagem">
+         <img src="{{filme.imagem}}" width="180" height="180">
+       </mat-card-content>
+        <button mat-button class="detalhes" color="primary" [routerLink]="['/detalhe']">SAIBA MAIS</button>
+  </mat-card>
+</div>
