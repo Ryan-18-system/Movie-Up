@@ -24,10 +24,13 @@ export class ListarCriticaComponent implements OnInit {
   }
 
   remover(critica: Critica): void {
-    const indxCriticaARemover = this.criticas.findIndex(u => u.mensagem === critica.mensagem);
-    if (indxCriticaARemover > -1) {
-      this.criticas.splice(indxCriticaARemover, 1);
-    }
+    this.criticaService.remover(critica.id).subscribe(
+      resposta => {
+        const indxCriticaARemover = this.criticas.findIndex(u => u.mensagem === critica.mensagem);
+        if (indxCriticaARemover > -1) {
+          this.criticas.splice(indxCriticaARemover, 1);
+        }
+      }
+    )
   }
-
 }
