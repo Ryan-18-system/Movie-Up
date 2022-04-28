@@ -44,6 +44,21 @@
       "titulo": "Pinoquio",
       "mensagem": "Muito bom",
       "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "nome": "Ryan  Nóbrega",
+      "titulo": "Arcane",
+      "mensagem": "Série boa, porém deixa a desejar em alguns pontos",
+      "id": 9
+    },
+    {
+      "nome": "Ryan",
+      "titulo": "bluebluebluee",
+      "mensagem": "asidoaisdjaoisdas",
+      "id": 10
     }
   ],
   "detalhes": [
@@ -56,6 +71,96 @@
       "genero": "Ação",
       "diretor": "Teste 3",
       "atores": "Tom Rola, Zendaya, Gordo chinês",
+      "duracao": 120
+    }
+  ],
+  "filmes": [
+    {
+      "id": 1,
+      "titulo": "homem-Aranha: Sem Volta para Casa ",
+      "imagem": "https://image.tmdb.org/t/p/original/fVzXp3NwovUlLe7fvoRynCmBPNc.jpg",
+      "dataLancamento": 2021,
+      "sinopse": "Após os acontecimentos de Homem-Aranha: Longe de Casa, o mundo acaba sabendo a real identidade do Homem-Aranha, além de acharem que foi ele quem matou Mysterio. Peter acaba pedindo ajuda para o Doutor Estranho para que ele apague essa informação de sua identidade secreta do mundo, mas o feitiço da errado e estranhamente, vilões de outras versões do Homem-Aranha de outros universos acabam indo para seu mundo, dificultando a vida de Peter.",
+      "genero": "Ação",
+      "diretor": "Jon Watts",
+      "atores": "Tom Holland, Zendaya, Jacob Batalon",
+      "duracao": 148
+    },
+    {
+      "id": 2,
+      "titulo": "batman",
+      "imagem": "https://www.themoviedb.org/t/p/original/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg",
+      "dataLancamento": 2022,
+      "sinopse": "Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se estabelece como a personificação da vingança para a população.",
+      "genero": "Ação",
+      "diretor": "Matt Reeves",
+      "atores": "Robert Pattinson, Zoë Kravitz, Paul Dano",
+      "duracao": 180
+    },
+    {
+      "id": 3,
+      "titulo": "eternos",
+      "imagem": "https://www.themoviedb.org/t/p/original/mzezdUZEnpiUIlxpdyLO1R08Lqm.jpg",
+      "dataLancamento": 2021,
+      "sinopse": "Os Eternos são uma raça de seres imortais que viveram durante a antiguidade da Terra, moldando sua história e suas civilizações enquanto batalhavam os malignos Deviantes.",
+      "genero": "Ação",
+      "diretor": "Chloé Zhao",
+      "atores": "Gemma Chan, Richard Madden, Angelina Jolie",
+      "duracao": 150
+    },
+    {
+      "id": 4,
+      "titulo": "sonic 2: O Filme",
+      "imagem": "https://www.themoviedb.org/t/p/original/f4SvCKIUrC2cDR7Xo4k1kaGAqQ2.jpg",
+      "dataLancamento": 2022,
+      "sinopse": "O Dr. Robotnik retorna à procura de uma esmeralda mística que tem o poder de destruir civilizações. Para detê-lo, Sonic se une a seu antigo parceiro, Tails, e parte em uma jornada para encontrar a joia antes que ela caia em mãos erradas.",
+      "genero": "Aventura, Ficção Científica",
+      "diretor": "Jeff Fowler",
+      "atores": "Jim Carrey, James Marsden, Tika Sumpter",
+      "duracao": 120
+    },
+    {
+      "id": 5,
+      "titulo": "venom: Tempo de Carnificina ",
+      "imagem": "https://www.themoviedb.org/t/p/original/h5UzYZquMwO9FVn15R2eK2itmHu.jpg",
+      "dataLancamento": 2021,
+      "sinopse": "Em busca de seu próximo furo de reportagem, o jornalista Eddie Brock consegue uma entrevista exclusiva com Cletus Kasady, um assassino no corredor da morte, que descobre o segredo de Eddie e se torna o hospedeiro de Carnificina, um simbionte aterrorizante e ameaçador. Eddie e Venom precisam superar sua relação atribulada e trabalhar em conjunto para derrotar Carnificina.",
+      "genero": "Ação",
+      "diretor": "Andy Serkis",
+      "atores": "Tom Hardy, Woody Harrelson, Michelle Williams",
+      "duracao": 120
+    },
+    {
+      "id": 6,
+      "titulo": "morbius",
+      "imagem": "https://www.themoviedb.org/t/p/original/h4WLN3cmEjCsH1fNGRfvGV6IPBX.jpg",
+      "dataLancamento": 2022,
+      "sinopse": "Durante um experimento para encontrar a cura de uma rara doença sanguínea, o Dr. Michael Morbius acidentalmente se transforma num sanguinário vampiro.",
+      "genero": "Ação",
+      "diretor": "Daniel Espinosa",
+      "atores": "Jared Leto, Matt Smith, Adria Arjona",
+      "duracao": 120
+    },
+    {
+      "id": 7,
+      "titulo": "luccas Neto em: Acampamento de Férias",
+      "imagem": "https://www.themoviedb.org/t/p/original/qZPBUSqcJ2LbKYEitosojSLclkx.jpg",
+      "dataLancamento": 2019,
+      "sinopse": "Luccas e Gi vão passar as férias no acampamento onde acontece a Gincana mais famosa do mundo. O único problema é que os 'implicantes' também foram para lá... Um musical para todas as idades que vai dar férias ao mau humor.",
+      "genero": "Comédia",
+      "diretor": "Lucas Margutti",
+      "atores": "Luccas Neto, Giovanna Alparone",
+      "duracao": 100
+    },
+    {
+      "id": 8,
+      "titulo": "batman: O Cavaleiro das Trevas",
+      "imagem": "https://www.themoviedb.org/t/p/original/iGZX91hIqM9Uu0KGhd4MUaJ0Rtm.jpg",
+      "dataLancamento": 2008,
+      "sinopse": "Após dois anos desde o surgimento do Batman, os criminosos de Gotham City têm muito o que temer. Com a ajuda do tenente James Gordon e do promotor público Harvey Dent, Batman luta contra o crime organizado. Acuados com o combate, os chefes do crime aceitam a proposta feita pelo Coringa e o contratam para combater o Homem-Morcego.",
+      "genero": "Ação",
+      "diretor": "Christopher Nolan",
+      "atores": "Christian Bale, Heath Ledger, Michael Caine",
       "duracao": 120
     }
   ]
