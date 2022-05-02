@@ -1,27 +1,6 @@
 {
   "criticas": [
     {
-      "id": 1,
-      "imagem": "https://www.themoviedb.org/t/p/original/bOggWFHLSn0MgDpiInbvurx2m1X.jpg",
-      "nome": "Usuario1",
-      "mensagem": "mensagem",
-      "titulo": "Titulo do Filme"
-    },
-    {
-      "id": 2,
-      "imagem": "https://www.themoviedb.org/t/p/original/bOggWFHLSn0MgDpiInbvurx2m1X.jpg",
-      "nome": "Usuario2",
-      "mensagem": "mensagem",
-      "titulo": "Titulo do Filme"
-    },
-    {
-      "id": 3,
-      "imagem": "https://www.themoviedb.org/t/p/original/bOggWFHLSn0MgDpiInbvurx2m1X.jpg",
-      "nome": "Ryan Nóbrega",
-      "mensagem": "Deplorável demais, muito ruim, chega da pena, deixa a desejar",
-      "titulo": "Titulo do Filme"
-    },
-    {
       "id": 4,
       "imagem": "https://www.themoviedb.org/t/p/original/bOggWFHLSn0MgDpiInbvurx2m1X.jpg",
       "nome": "Renata Albuquerque",
