@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
+import {Usuario} from "../../shared/model/usuario";
+import {UsuarioService} from "../../shared/service/usuario.service";
+import {MenssageService} from "../../shared/service/menssage.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -8,16 +12,29 @@ import {FormControl, Validators} from "@angular/forms";
 })
 export class LoginComponent implements OnInit {
   hide:any = true
-  email = new FormControl('', [Validators.required, Validators.email]);
-  constructor() { }
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'Digite seu email';
+  usuarios: Array<Usuario> = []
+  constructor(private usuarioService: UsuarioService, private menssageService: MenssageService,
+              private roteador: Router
+              ) { }
+
+
+  ngOnInit(): void {
+  }
+  autenticacao(email: string, senha: string){
+    if( !email || !senha ){
+      this.menssageService.warning("Campos Vazios, não foi possível efetuar login")
+    } else{
+      this.usuarioService.autenticar(email,senha).subscribe(
+        (usuario) => {
+          if (usuario.length < 1 ){
+            this.menssageService.warning('Erro de Autenticação, email ou senha estão incorretos')
+          }else{
+            this.roteador.navigate([''])
+          }
+        }
+      )
     }
 
-    return this.email.hasError('email') ? 'Email digitado está incorreto' : '';
-  }
-  ngOnInit(): void {
   }
 
 }

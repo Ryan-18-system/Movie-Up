@@ -6,8 +6,12 @@ import {MatSelectModule} from "@angular/material/select";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
+import {MatCardModule} from "@angular/material/card";
+import {RouterModule} from "@angular/router";
+
+
 
 
 
@@ -22,6 +26,10 @@ import {MatButtonModule} from "@angular/material/button";
     MatIconModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatCardModule,
+    FormsModule,
+    RouterModule,
+
   ]
 })
 export class UsuarioModule { }
