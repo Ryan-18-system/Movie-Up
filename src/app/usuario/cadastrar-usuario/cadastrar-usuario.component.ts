@@ -46,14 +46,19 @@ export class CadastrarUsuarioComponent implements OnInit {
   }
 
   inserirUsuario(): void {
+    if(this.usuario.nome == null || this.usuario.senha == null){
+      this.menssageService.warning("Campos Vazios")
+    }else{
       this.usuarioService.inserir(this.usuario).subscribe(
         usuarioInserido => {
           console.log(usuarioInserido);
           this.menssageService.success('Usuário inserido com sucesso com sucesso!');
           this.roteador.navigate(['login'])
         }
-      );
+      )
     }
+
+  }
 }
 
 

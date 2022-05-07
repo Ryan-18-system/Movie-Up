@@ -8,15 +8,15 @@ import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
-import { PerfilComponent } from './perfil/perfil.component';
 import {MatCardModule} from "@angular/material/card";
+import {RouterModule} from "@angular/router";
 
 
 
 
 
 @NgModule({
-  declarations: [CadastrarUsuarioComponent, PerfilComponent],
+  declarations: [CadastrarUsuarioComponent],
   imports: [
     CommonModule,
     MatFormFieldModule,
@@ -28,6 +28,7 @@ import {MatCardModule} from "@angular/material/card";
     MatButtonModule,
     MatCardModule,
     FormsModule,
+    RouterModule,
 
   ]
 })

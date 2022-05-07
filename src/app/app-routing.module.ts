@@ -13,7 +13,7 @@ import {CadastrarUsuarioComponent} from "./usuario/cadastrar-usuario/cadastrar-u
 import {DetalheComponent} from "./detalhe/detalhe.component";
 import {AddFavoritosComponent} from "./favoritos/add-favoritos/add-favoritos.component";
 import {BuscarFilmesComponent} from "./filme/buscar-filmes/buscar-filmes.component";
-import {PerfilComponent} from "./usuario/perfil/perfil.component";
+
 
 const routes: Routes = [
   {
@@ -67,10 +67,6 @@ const routes: Routes = [
   {
     path: 'buscarfilme',
     component: BuscarFilmesComponent
-  },
-  {
-    path: 'perfil',
-    component: PerfilComponent
   },
   {
     path: 'cadastrar-usuario/:id',
