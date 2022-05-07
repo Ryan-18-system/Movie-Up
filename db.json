@@ -1,66 +1,5 @@
 {
-  "criticas": [
-    {
-      "id": 1,
-      "imagem": "https://www.themoviedb.org/t/p/original/bOggWFHLSn0MgDpiInbvurx2m1X.jpg",
-      "nome": "Usuario1",
-      "mensagem": "mensagem",
-      "titulo": "Titulo do Filme"
-    },
-    {
-      "id": 2,
-      "imagem": "https://www.themoviedb.org/t/p/original/bOggWFHLSn0MgDpiInbvurx2m1X.jpg",
-      "nome": "Usuario2",
-      "mensagem": "mensagem",
-      "titulo": "Titulo do Filme"
-    },
-    {
-      "id": 3,
-      "imagem": "https://www.themoviedb.org/t/p/original/bOggWFHLSn0MgDpiInbvurx2m1X.jpg",
-      "nome": "Ryan Nóbrega",
-      "mensagem": "Deplorável demais, muito ruim, chega da pena, deixa a desejar",
-      "titulo": "Titulo do Filme"
-    },
-    {
-      "id": 4,
-      "imagem": "https://www.themoviedb.org/t/p/original/bOggWFHLSn0MgDpiInbvurx2m1X.jpg",
-      "nome": "Renata Albuquerque",
-      "mensagem": "Filmaço, dígno de cinema",
-      "titulo": "Titulo do Filme"
-    },
-    {
-      "titulo": "Rapunzel ",
-      "mensagem": "Filmaço do caralho",
-      "id": 5
-    },
-    {
-      "nome": "Ryanzinho",
-      "titulo": "Flash",
-      "mensagem": "Horripilante de ruim",
-      "id": 6
-    },
-    {
-      "nome": "Ryan",
-      "titulo": "Pinoquio",
-      "mensagem": "Muito bom",
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "nome": "Ryan  Nóbrega",
-      "titulo": "Arcane",
-      "mensagem": "Série boa, porém deixa a desejar em alguns pontos",
-      "id": 9
-    },
-    {
-      "nome": "Ryan",
-      "titulo": "bluebluebluee",
-      "mensagem": "asidoaisdjaoisdas",
-      "id": 10
-    }
-  ],
+  "criticas": [],
   "detalhes": [
     {
       "id": 1,
@@ -162,6 +101,29 @@
       "diretor": "Christopher Nolan",
       "atores": "Christian Bale, Heath Ledger, Michael Caine",
       "duracao": 120
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Ryan Nóbrega",
+      "email": "ryanbrandao18@gmail.com",
+      "categoria": "crítico",
+      "senha": "ryanzinholindo@1234"
+    },
+    {
+      "id": 2,
+      "nome": "Renata Albuquerque",
+      "email": "renata.albuquerque@academico.ifpb.edu.br",
+      "categoria": "Comum",
+      "senha": "renatinha@489102"
+    },
+    {
+      "email": "ryanbrandao18@gmail.com",
+      "nome": "Ryan Nóbrega Brandão",
+      "senha": "232323123123",
+      "categoria": "Crítico",
+      "id": 3
     }
   ]
 }
