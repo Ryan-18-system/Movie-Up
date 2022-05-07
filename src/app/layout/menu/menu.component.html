@@ -1,19 +1,19 @@
 <mat-toolbar color="primary" class="menu">
   <img src="/assets/logomovie.png" alt="" class="logo" [routerLink]="['/']" />
   <div class="loc">
-    <mat-icon>room icon</mat-icon>
-    <p>localização/CEP</p>
+    <mat-icon></mat-icon>
+    <p>Movie-up</p>
   </div>
 
   <div class="navbar">
-    <button [routerLink]="['/filmes']" mat-button class="menu-text" [matMenuTriggerFor]="filmes" >FILMES</button>
+    <button mat-button class="menu-text" [matMenuTriggerFor]="filmes" >FILMES</button>
     <mat-menu #filmes="matMenu">
       <button mat-menu-item [routerLink]="['/buscarfilme']">Buscar Filmes</button>
       <button mat-menu-item [routerLink]="['/filmes-da-semana']">Filmes da Semana</button>
       <button mat-menu-item [routerLink]="['/aclamados-pela-critica']">Aclamados pela Crítica</button>
       <button mat-menu-item [routerLink]="['/mais-esperados']">Mais esperados do Ano</button>
     </mat-menu>
-    <button [routerLink]="['/series']" mat-button class="menu-text" [matMenuTriggerFor]="serie">SÉRIES</button>
+    <button  mat-button class="menu-text" [matMenuTriggerFor]="serie">SÉRIES</button>
     <mat-menu #serie="matMenu">
       <button mat-menu-item>Em alta</button>
       <button mat-menu-item>Vencedoras do Emmy</button>
@@ -25,7 +25,7 @@
     </mat-menu>
     <button mat-button class="menu-text" [matMenuTriggerFor]="criticas">CRÍTICAS</button>
     <mat-menu #criticas="matMenu">
-      <button [routerLink]="['/cadastrar-critica']" mat-menu-item>Fazer uma Avaliação</button>
+      <button mat-menu-item [routerLink]="['/cadastrar-critica']" >Fazer uma Avaliação</button>
       <button mat-menu-item [routerLink]="['/listar-critica']">Últimas avaliações</button>
     </mat-menu>
   </div>
@@ -33,7 +33,7 @@
   <button mat-icon-button  [matMenuTriggerFor]="menuUsuario"  >
     <mat-icon>person</mat-icon>
     <mat-menu #menuUsuario="matMenu">
-      <button mat-menu-item>Meu Perfil</button>
+      <button mat-menu-item [routerLink]="['/perfil']">Meu Perfil</button>
       <button mat-menu-item [routerLink]="['/login']">Login</button>
       <button mat-menu-item [routerLink]="['/cadastrarusuario']" >Cadastre-se</button>
     </mat-menu>

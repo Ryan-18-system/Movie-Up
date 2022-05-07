@@ -14,6 +14,8 @@ import {FavoritosModule} from "./favoritos/favoritos.module";
 import { CriticaModule } from './critica/critica.module';
 import { DetalheComponent } from './detalhe/detalhe.component';
 import {MatCardModule} from "@angular/material/card";
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -34,8 +36,7 @@ import {MatCardModule} from "@angular/material/card";
         CriticaModule,
         HttpClientModule,
         MatCardModule,
-
-
+        MatSnackBarModule
     ],
   providers: [],
   bootstrap: [AppComponent]
