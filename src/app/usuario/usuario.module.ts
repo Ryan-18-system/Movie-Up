@@ -6,13 +6,17 @@ import {MatSelectModule} from "@angular/material/select";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
+import { PerfilComponent } from './perfil/perfil.component';
+import {MatCardModule} from "@angular/material/card";
+
+
 
 
 
 @NgModule({
-  declarations: [CadastrarUsuarioComponent],
+  declarations: [CadastrarUsuarioComponent, PerfilComponent],
   imports: [
     CommonModule,
     MatFormFieldModule,
@@ -22,6 +26,9 @@ import {MatButtonModule} from "@angular/material/button";
     MatIconModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatCardModule,
+    FormsModule,
+
   ]
 })
 export class UsuarioModule { }
