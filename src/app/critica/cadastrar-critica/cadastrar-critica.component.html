@@ -5,20 +5,20 @@
   </mat-card-header>
 
   <mat-card-content class="content">
-    <mat-form-field appearance="outline" class="input-cadastro">
+    <!-- <mat-form-field appearance="outline" class="input-cadastro">
       <mat-label>Selecione a Categoria da Crítica</mat-label>
       <mat-select>
         <mat-option value="serie">Série</mat-option>
         <mat-option value="filme">Filme</mat-option>
       </mat-select>
-    </mat-form-field>
+    </mat-form-field> -->
     <mat-form-field class="mat-form-simples">
       <mat-label>Nome do Crítico</mat-label>
-      <input matInput [(ngModel)]="critica.nome" placeholder="Digite seu nome" type="text">
+      <input matInput [(ngModel)]="critica.nomeDoCritico" placeholder="Digite seu nome" type="text">
     </mat-form-field>
     <mat-form-field class="mat-form-simples">
       <mat-label>Nome da Obra</mat-label>
-      <input matInput [(ngModel)]="critica.titulo" placeholder="Digite o nome da obra" type="search">
+      <input matInput [(ngModel)]="critica.nomeDaObra" placeholder="Digite o nome da obra" type="search">
     </mat-form-field>
     <mat-form-field  class="mat-form-simples">
       <mat-label>Avaliar</mat-label>
