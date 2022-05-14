@@ -20,22 +20,9 @@ export class FilmesFirestoreService {
     return this.colecaoFilmes.valueChanges({idField: 'id'});
   }
 
-  inserir(filme: Filme): Observable<Filme> {
-    delete filme.id;
-    return from(this.colecaoFilmes.add(Object.assign({}, filme)));
-  }
-
-  remover(id: string): Observable<void> {
-    return from(this.colecaoFilmes.doc(id).delete());
-  }
-
   pesquisarPorId(id: string): Observable<Filme> {
     return this.colecaoFilmes.doc(id).get().pipe(map(document => new Filme(document.id, document.data())));
   }
 
-  atualizar(filme: Filme): Observable<void> {
-    delete filme.id;
-    return from(this.colecaoFilmes.doc(filme.id).update(Object.assign({}, filme)));
-  }
 
 }

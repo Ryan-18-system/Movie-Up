@@ -20,22 +20,8 @@ export class SeriesFirestoreService {
     return this.colecaoSeries.valueChanges({idField: 'id'});
   }
 
-  inserir(serie: Serie): Observable<Serie> {
-    delete serie.id;
-    return from(this.colecaoSeries.add(Object.assign({}, serie)));
-  }
-
-  remover(id: string): Observable<void> {
-    return from(this.colecaoSeries.doc(id).delete());
-  }
-
   pesquisarPorId(id: string): Observable<Serie> {
     return this.colecaoSeries.doc(id).get().pipe(map(document => new Serie(document.id, document.data())));
-  }
-
-  atualizar(serie: Serie): Observable<void> {
-    delete serie.id;
-    return from(this.colecaoSeries.doc(serie.id).update(Object.assign({}, serie)));
   }
 
 }
