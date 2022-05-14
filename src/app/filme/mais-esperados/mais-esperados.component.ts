@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Filme } from 'src/app/shared/model/Filme';
+import { FilmesFirestoreService } from 'src/app/shared/service/filmes-firestore.service';
 
 @Component({
   selector: 'app-mais-esperados',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaisEsperadosComponent implements OnInit {
 
-  constructor() { }
+  filmes: Array<Filme> = [];
+
+  constructor(private filmeService: FilmesFirestoreService) { }
 
   ngOnInit(): void {
+    this.filmeService.listar().subscribe(
+      filmes => this.filmes = filmes
+    );
   }
 
 }

@@ -2,7 +2,7 @@ export class Filme{
   id?: string;
   titulo?: string;
   imagem?: string;
-  dataLancamento?: string;
+  dataLancamento?: number;
   sinopse?:string;
   genero?: string;
   diretor?: string;
