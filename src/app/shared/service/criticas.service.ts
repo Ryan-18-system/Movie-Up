@@ -15,12 +15,12 @@ export class CriticasService {
   }
 
   //get
-  listarCritica(): Observable<Critica[]> {
+  listar(): Observable<Critica[]> {
     return this.httpClient.get<Critica[]>(this.URL_CRITICAS);
   }
 
   //post
-  inserirCritica(critica: Critica): Observable<Critica> {
+  inserir(critica: Critica): Observable<Critica> {
     return this.httpClient.post<Critica>(this.URL_CRITICAS, critica);
   }
 

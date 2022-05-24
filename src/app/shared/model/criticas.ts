@@ -1,10 +1,10 @@
 export class Critica {
-  id?: string;
+  id?: number;
   mensagem?: string;
   nomeDaObra?: string;
   nomeDoCritico?: string;
 
-  constructor(id?: string, critica: Critica = {}) {
+  constructor(id?: number, critica: Critica = {}) {
     this.id = id;
     this.mensagem = critica.mensagem;
     this.nomeDoCritico = critica.nomeDoCritico;
