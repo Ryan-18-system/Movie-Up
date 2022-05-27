@@ -21,7 +21,7 @@
     </mat-menu>
     <button mat-button class="menu-text" [matMenuTriggerFor]="cinema">CINEMAS</button>
     <mat-menu #cinema="matMenu">
-      <button mat-menu-item>Buscar Cinema</button>
+      <button mat-menu-item [routerLink]="['/buscar-cinema']">Buscar Cinema</button>
     </mat-menu>
     <button mat-button class="menu-text" [matMenuTriggerFor]="criticas">CRÍTICAS</button>
     <mat-menu #criticas="matMenu">
