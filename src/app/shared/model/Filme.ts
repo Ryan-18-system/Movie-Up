@@ -8,6 +8,12 @@ export class Filme{
   diretor?: string;
   atores?: Array<string>;
   duracao?: number;
+  emalta?: string;
+  favoritos?: string;
+  emcartaz?: string;
+  semana?: string;
+  aclamados?: string;
+  esperados?: string;
 
   constructor(id?: string, filme: Filme = {}) {
     this.id = id;
@@ -19,6 +25,12 @@ export class Filme{
     this.diretor = filme.diretor;
     this.atores = filme.atores;
     this.duracao = filme.duracao;
+    this.emalta = filme.emalta;
+    this.favoritos = filme.favoritos;
+    this.emcartaz = filme.emcartaz;
+    this.semana = filme.semana;
+    this.aclamados = filme.aclamados;
+    this.esperados  = filme.esperados;
   }
 
 }
