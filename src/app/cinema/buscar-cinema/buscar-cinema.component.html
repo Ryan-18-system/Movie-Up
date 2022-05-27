@@ -1,0 +1,28 @@
+<div class="Estado">
+  <h4>Busca teu cinema ai pau no cu</h4>
+  <div>
+    <mat-label>Estados</mat-label>
+    <select matNativeControl required>
+      <option value="CE" #CE (click)="buscarCidadePorEstado(CE.value)">CE</option>
+      <option value="PB" #PB (click)="buscarCidadePorEstado(PB.value)">PB</option>
+      <option value="AM" #AM (click)="buscarCidadePorEstado(AM.value)">AM</option>
+      <option value="DF" #DF (click)="buscarCidadePorEstado(DF.value)">DF</option>
+    </select>
+  </div>
+  <div>
+    <mat-label>Cidades</mat-label>
+    <select matNativeControl>
+      <option *ngFor="let cidade of listaCidade" (click)="buscarCinemaIdCidade(cidade.id)"> {{cidade.name}} </option>
+    </select>
+  </div>
+  <div>
+    <mat-label>Cinemas</mat-label>
+    <select matNativeControl >
+      <option *ngFor="let cinema of cinemas" > {{cinema.name}} </option>
+    </select>
+  </div>
+
+</div>
+<div class="Cidade">
+
+</div>
