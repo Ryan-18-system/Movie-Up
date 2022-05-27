@@ -1,9 +1,11 @@
-export class Cidade {
-  id!:string;
-  name!: string;
-  uf!: string;
-  state!: string;
-  uflKey!: string
-  timeZone!: string
+export class Estado {
+  name?:string;
+  uf?: string;
+  cities?: Array<Object>;
+  constructor(estado : Estado = {}) {
+    this.uf = estado.uf;
+    this.cities = estado.cities;
+    this.name = estado.name
+  }
 
 }
