@@ -1,0 +1,14 @@
+.estado{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.title h2{
+  padding-top: 30px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+
+}
