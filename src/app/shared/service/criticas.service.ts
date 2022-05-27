@@ -9,7 +9,7 @@ import {Observable} from 'rxjs';
 export class CriticasService {
 
 
-  URL_CRITICAS = 'http://localhost:8080/criticas';
+  URL_CRITICAS = 'http://localhost:8082/criticas';
 
   constructor(private httpClient: HttpClient) {
   }

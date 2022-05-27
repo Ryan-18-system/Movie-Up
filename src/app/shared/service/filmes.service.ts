@@ -8,7 +8,8 @@ import { Filme } from '../model/Filme';
 })
 
 export class FilmeService {
-  URL_FILMES = 'http://localhost:8080/filmes';
+  URL_FILMES = 'http://localhost:8082/filmes';
+
 
   constructor(private httpClient: HttpClient) { }
 
@@ -16,5 +17,24 @@ export class FilmeService {
     return this.httpClient.get<Filme[]>(this.URL_FILMES);
   }
 
+  listarEmalta(): Observable<Filme[]> {
+    return this.httpClient.get<Filme[]>(`${this.URL_FILMES}/emalta`);
+  }
+
+  listarFavoritos(): Observable<Filme[]> {
+    return this.httpClient.get<Filme[]>(`${this.URL_FILMES}/favoritos`);
+  }
+
+  listarAclamados(): Observable<Filme[]> {
+    return this.httpClient.get<Filme[]>(`${this.URL_FILMES}/aclamados`);
+  }
+
+  listarEsperados(): Observable<Filme[]> {
+    return this.httpClient.get<Filme[]>(`${this.URL_FILMES}/esperados`);
+  }
+
+  listarFavSemana(): Observable<Filme[]> {
+    return this.httpClient.get<Filme[]>(`${this.URL_FILMES}/favsemana`);
+  }
 }
 
