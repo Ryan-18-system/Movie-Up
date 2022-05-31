@@ -124,6 +124,18 @@
       "senha": "232323123123",
       "categoria": "Crítico",
       "id": 3
+    },
+    {
+      "email": "livia@gmail.com",
+      "nome": "Lívya",
+      "senha": "123456",
+      "id": 4
+    },
+    {
+      "email": "DiegodaCostaAlencar00@hotmail.com",
+      "nome": "Diego da Costa Alencar",
+      "senha": "didi332211",
+      "id": 5
     }
   ]
 }

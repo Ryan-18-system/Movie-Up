@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Critica } from 'src/app/shared/model/criticas';
-import { CriticasFirestoreService } from 'src/app/shared/service/criticas-firestore.service';
+import { CriticasService } from 'src/app/shared/service/criticas.service';
 import {MenssageService} from "../../shared/service/menssage.service";
 
 @Component({
@@ -11,7 +11,7 @@ import {MenssageService} from "../../shared/service/menssage.service";
 export class ListarCriticaComponent implements OnInit {
   criticas: Array<Critica> = [];
 
-  constructor(private criticaService: CriticasFirestoreService, private menssageService: MenssageService) {
+  constructor(private criticaService: CriticasService, private menssageService: MenssageService) {
   }
 
   ngOnInit(): void {
@@ -25,7 +25,7 @@ export class ListarCriticaComponent implements OnInit {
   }
 
   remover(critica: Critica): void {
-    this.criticaService.remover(critica.id || '').subscribe(
+    this.criticaService.remover(critica.id || 0).subscribe(
       resposta => {
         const indxCriticaARemover = this.criticas.findIndex(u => u.mensagem === critica.mensagem);
         if (indxCriticaARemover > -1) {

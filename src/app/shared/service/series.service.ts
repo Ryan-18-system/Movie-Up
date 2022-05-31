@@ -8,11 +8,27 @@ import {Observable} from "rxjs";
 })
 
 export class SerieService {
-  URL_SERIES = 'http://localhost:8080/series';
+  URL_SERIES = 'http://localhost:8082/series';
   constructor(private httpClient: HttpClient) { }
 
   pesquisar(id:number): Observable<Serie> {
     return this.httpClient.get<Serie>(`${this.URL_SERIES}/${id}`);
+  }
+
+  listar(): Observable<Serie[]> {
+    return this.httpClient.get<Serie[]>(this.URL_SERIES);
+  }
+
+  listarEmalta(): Observable<Serie[]> {
+    return this.httpClient.get<Serie[]>(`${this.URL_SERIES}/emalta`);
+  }
+
+  listarVencedoras(): Observable<Serie[]> {
+    return this.httpClient.get<Serie[]>(`${this.URL_SERIES}/vencedoras`);
+  }
+
+  listarLancamentos(): Observable<Serie[]> {
+    return this.httpClient.get<Serie[]>(`${this.URL_SERIES}/lancamentos`);
   }
 
 }

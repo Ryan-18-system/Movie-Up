@@ -9,18 +9,18 @@ import {Observable} from 'rxjs';
 export class CriticasService {
 
 
-  URL_CRITICAS = 'http://localhost:8080/criticas';
+  URL_CRITICAS = 'http://localhost:8082/criticas';
 
   constructor(private httpClient: HttpClient) {
   }
 
   //get
-  listarCritica(): Observable<Critica[]> {
+  listar(): Observable<Critica[]> {
     return this.httpClient.get<Critica[]>(this.URL_CRITICAS);
   }
 
   //post
-  inserirCritica(critica: Critica): Observable<Critica> {
+  inserir(critica: Critica): Observable<Critica> {
     return this.httpClient.post<Critica>(this.URL_CRITICAS, critica);
   }
 

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Filme} from "../../shared/model/Filme";
 import {BuscarFilmeService} from "../../shared/service/buscar-filme.service";
-import {newArray} from "@angular/compiler/src/util";
 
 @Component({
   selector: 'app-buscar-filmes',
@@ -21,6 +20,7 @@ export class BuscarFilmesComponent implements OnInit {
     this.buscarFilmeService.buscarFilme(value).subscribe(
       value => {
         this.filmes = value
+        console.log(value);
       }
     )
   }

@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
               private roteador: Router
               ) { }
 
-
   ngOnInit(): void {
   }
   autenticacao(email: string, senha: string){

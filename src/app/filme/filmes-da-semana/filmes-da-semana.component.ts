@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Filme } from 'src/app/shared/model/Filme';
-import { FilmesFirestoreService } from 'src/app/shared/service/filmes-firestore.service';
+import { FilmeService } from 'src/app/shared/service/filmes.service';
 
 @Component({
   selector: 'app-filmes-da-semana',
@@ -11,10 +11,10 @@ export class FilmesDaSemanaComponent implements OnInit {
 
   filmes: Array<Filme> = [];
 
-  constructor(private filmeService: FilmesFirestoreService) { }
+  constructor(private filmeService: FilmeService) { }
 
   ngOnInit(): void {
-    this.filmeService.listar().subscribe(
+    this.filmeService.listarFavSemana().subscribe(
       filmes => this.filmes = filmes
     );
   }

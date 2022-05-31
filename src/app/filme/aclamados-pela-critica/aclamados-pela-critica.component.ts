@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Filme } from 'src/app/shared/model/Filme';
-import { FilmesFirestoreService } from 'src/app/shared/service/filmes-firestore.service';
+import { FilmeService } from 'src/app/shared/service/filmes.service';
 
 @Component({
   selector: 'app-aclamados-pela-critica',
@@ -11,10 +11,10 @@ export class AclamadosPelaCriticaComponent implements OnInit {
 
   filmes: Array<Filme> = [];
 
-  constructor(private filmeService: FilmesFirestoreService) { }
+  constructor(private filmeService: FilmeService) { }
 
   ngOnInit(): void {
-    this.filmeService.listar().subscribe(
+    this.filmeService.listarAclamados().subscribe(
       filmes => this.filmes = filmes
     );
   }
