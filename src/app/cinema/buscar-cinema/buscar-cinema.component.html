@@ -23,18 +23,20 @@
     <mat-select matNativeControl required>
       <mat-option value="{{cinema.urlKey}}"   *ngFor="let cinema of cinemas" (click)="buscarFilmePorCinema(cinema.cityId, cinema.urlKey)"> {{cinema.urlKey}} </mat-option>
     </mat-select>
-
   </mat-form-field>
-  <mat-card *ngFor="let filme of filmesCinemas">
-    <mat-card-header>
-      <mat-card-title>{{filme.title}}</mat-card-title>
-      <mat-card-subtitle >Gênero:{{filme.genres}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content><button><a href="{{filme.nationalSiteURL}}" target="_blank">Comprar ingresso</a></button></mat-card-content>
-  </mat-card>
-
-
-
+  <div fxLayout="row" fxLayoutAlign="center none" class="cards-filmes">
+    <mat-card *ngFor="let filme of filmesCinemas" class="cards">
+      <mat-card-header>
+        <mat-card-title>{{filme.title}}</mat-card-title>
+        <mat-card-subtitle>Gênero: {{filme.genres}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <button mat-button class="btn-comprar">
+          <a href="{{filme.nationalSiteURL}}" target="_blank">Comprar ingresso</a>
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
 
 </div>
 
