@@ -3,9 +3,13 @@ export class Cidade {
   name?: string;
   uf?: string;
 
+
+
   constructor(cidade: Cidade = {}) {
     this.uf = cidade.uf;
     this.id = cidade.id;
     this.name = cidade.name
+
+
   }
 }

@@ -1,29 +1,8 @@
 <h1 class="text-section">Filmes mais esperados do ano</h1>
 
 <mat-grid-list cols="4" rowHeight="1:1">
-  <mat-grid-tile>
-    <img src="https://www.themoviedb.org/t/p/original/725WE0Qb1BbUF7aGvjiQqzzffpg.jpg" width="280" height="300">
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <img src="https://www.themoviedb.org/t/p/original/bOggWFHLSn0MgDpiInbvurx2m1X.jpg" width="280" height="300">
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <img src="https://www.themoviedb.org/t/p/original/fVzXp3NwovUlLe7fvoRynCmBPNc.jpg" width="280" height="300">
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <img src="https://www.themoviedb.org/t/p/original/cKNxg77ll8caX3LulREep4C24Vx.jpg" width="280" height="300">
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <img src="https://www.themoviedb.org/t/p/original/11MJy6lkt7yTEIowEPIkaK4B7lM.jpg" width="280" height="300">
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <img src="https://www.themoviedb.org/t/p/original/725WE0Qb1BbUF7aGvjiQqzzffpg.jpg" width="280" height="300">
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <img src="https://www.themoviedb.org/t/p/original/bOggWFHLSn0MgDpiInbvurx2m1X.jpg" width="280" height="300">
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <img src="https://www.themoviedb.org/t/p/original/cKNxg77ll8caX3LulREep4C24Vx.jpg" width="280" height="300">
+  <mat-grid-tile *ngFor="let card of filmes" >
+    <img src="{{card.imagem}}" width="280" height="300">
   </mat-grid-tile>
 
 </mat-grid-list>

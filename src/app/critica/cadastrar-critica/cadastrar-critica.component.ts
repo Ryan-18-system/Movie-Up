@@ -20,7 +20,7 @@ export class CadastrarCriticaComponent implements OnInit {
   }
 
   inserir(): void {
-    this.criticaService.inserirCritica(this.critica).subscribe(
+    this.criticaService.inserir(this.critica).subscribe(
       critica => this.menssageService.success("Crítica cadastrada com sucesso")
       )
     this.critica = new Critica()

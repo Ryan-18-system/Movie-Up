@@ -15,17 +15,17 @@ export class ListarCriticaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.criticaService.listarCritica().subscribe(
+    this.criticaService.listar().subscribe(
       criticas => this.criticas = criticas
     );
   }
 
   editar(critica: Critica): void {
-    critica.nome += ' Alterado';
+    critica.nomeDaObra += ' Alterado';
   }
 
   remover(critica: Critica): void {
-    this.criticaService.remover(critica.id).subscribe(
+    this.criticaService.remover(critica.id || 0).subscribe(
       resposta => {
         const indxCriticaARemover = this.criticas.findIndex(u => u.mensagem === critica.mensagem);
         if (indxCriticaARemover > -1) {
