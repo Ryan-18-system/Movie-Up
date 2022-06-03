@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from "@angular/material/input";
 import { BuscarSeriesComponent } from './buscar-series/buscar-series.component';
-import { ListarSeriesComponent } from './listar-series/listar-series.component';
 import { EmAltaComponent } from './em-alta/em-alta.component';
 import { VencedorasComponent } from './vencedoras/vencedoras.component';
 import { LancamentosComponent } from './lancamentos/lancamentos.component';
@@ -16,7 +15,6 @@ import { LancamentosComponent } from './lancamentos/lancamentos.component';
 @NgModule({
   declarations: [
     BuscarSeriesComponent,
-    ListarSeriesComponent,
     EmAltaComponent,
     VencedorasComponent,
     LancamentosComponent
@@ -28,6 +26,12 @@ import { LancamentosComponent } from './lancamentos/lancamentos.component';
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
-  ]
+  ],
+  exports: [
+    BuscarSeriesComponent,
+    EmAltaComponent,
+    VencedorasComponent,
+    LancamentosComponent
+  ],
 })
 export class SerieModule { }
