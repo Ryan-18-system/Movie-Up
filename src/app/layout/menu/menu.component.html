@@ -15,9 +15,10 @@
     </mat-menu>
     <button  mat-button class="menu-text" [matMenuTriggerFor]="serie">SÉRIES</button>
     <mat-menu #serie="matMenu">
-      <button mat-menu-item>Em alta</button>
-      <button mat-menu-item>Vencedoras do Emmy</button>
-      <button mat-menu-item>Lançamentos</button>
+      <button mat-menu-item [routerLink]="['/buscarserie']">Buscar Séries</button>
+      <button mat-menu-item [routerLink]="['/emalta']">Em alta</button>
+      <button mat-menu-item [routerLink]="['/vencedoras']">Vencedoras do Emmy</button>
+      <button mat-menu-item [routerLink]="['/lancamentos']">Lançamentos</button>
     </mat-menu>
     <button mat-button class="menu-text" [matMenuTriggerFor]="cinema">CINEMAS</button>
     <mat-menu #cinema="matMenu">
