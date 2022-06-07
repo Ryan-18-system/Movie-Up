@@ -30,7 +30,7 @@
       <button mat-menu-item [routerLink]="['/listar-critica']">Últimas avaliações</button>
     </mat-menu>
   </div>
-  <button mat-button class="menu-text">FAVORITOS</button>
+  <button mat-button class="menu-text"  [routerLink]="['/listar-favoritos']">FAVORITOS</button>
   <button mat-icon-button  [matMenuTriggerFor]="menuUsuario"  >
     <mat-icon>person</mat-icon>
     <mat-menu #menuUsuario="matMenu">
