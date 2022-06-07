@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BuscarCinemaService} from "../../shared/service/buscar-cinema.service";
 import {HttpClient} from "@angular/common/http";
-import {Estado} from "../../shared/model/estado";
 
 @Component({
   selector: 'app-buscar-cinema',
@@ -9,7 +8,6 @@ import {Estado} from "../../shared/model/estado";
   styleUrls: ['./buscar-cinema.component.css']
 })
 export class BuscarCinemaComponent implements OnInit {
-  listaEstado: Array<Estado> = [];
   listaCidade: Array<any> = []
   cinemas: Array<any> = []
   filmesCinemas: Array<any> = [];
@@ -20,18 +18,12 @@ export class BuscarCinemaComponent implements OnInit {
   buscarCidadePorEstado(value: string){  //Busca as cidades referente ao Estado Escolhido
     this.cinemaService.buscarCinemaPorEstado(value).subscribe(
       value=>{
-        this.listaCidade.pop();
-        this.listaEstado.pop();
+        this.listaCidade.splice(0, this.listaCidade.length);
+        this.cinemas.splice(0, this.cinemas.length)
         const cidade = value.cities
         cidade?.forEach(value=>{
-          if(this.listaCidade.length > 0){
-            this.listaCidade.pop()
-            this.listaCidade.push(value)
-          }
           this.listaCidade.push(value)
         })
-        this.listaEstado.push(value)
-
       }
     )
   }
