@@ -1,3 +1,4 @@
+import { ListarFavoritosComponent } from './favoritos/listar-favoritos/listar-favoritos.component';
 import { CadastrarCriticaComponent } from './critica/cadastrar-critica/cadastrar-critica.component';
 import { ListarCriticaComponent } from './critica/listar-critica/listar-critica.component';
 import { MaisEsperadosComponent } from './filme/mais-esperados/mais-esperados.component';
@@ -86,6 +87,10 @@ const routes: Routes = [
   {
     path: 'buscar-cinema',
     component: BuscarCinemaComponent
+  },
+  {
+  path: 'listar-favoritos',
+  component: ListarFavoritosComponent
   }
 ];
 

@@ -1,6 +1,23 @@
+.title{
+  margin-top: 20px;
+  font-size: 22px;
+  color: whitesmoke;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.lista-favoritos{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .mat-card-listagem{
   width: 250px;
-  height: 200px;
+  height: 250px;
   margin-top: 5px;
   background-color: darkslateblue;
 }
