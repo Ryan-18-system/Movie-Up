@@ -10,6 +10,11 @@
 <div fxLayout="row" fxLayoutAlign="center none" class="cards-emalta">
   <div *ngFor="let card of filmes" class="emalta">
     <img src="{{card.imagem}}" width="280" height="300">
+    <div class="add-fav">
+      {{card.titulo | titlecase}}
+      <mat-icon class="fav-icon" (click)="inserirFav(card.id)">favorite_border</mat-icon>
+
+    </div>
   </div>
 
 </div>

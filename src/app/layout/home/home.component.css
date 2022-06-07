@@ -31,11 +31,27 @@
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  position: relative;
 }
 
 .emalta{
   min-width: 300px;
   display: inline-block;
+}
+
+.add-fav{
+  background-color: white;
+  width: 280px;
+  padding: 1px;
+  position: absolute;
+  bottom: 1px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fav-icon{
+  margin-right: 5px ;
+  cursor: pointer;
 }
 
 @media (max-width: 1445px)
