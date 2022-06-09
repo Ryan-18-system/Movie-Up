@@ -1,8 +1,7 @@
 <mat-toolbar color="primary" class="menu">
   <img src="/assets/logomovie.png" alt="" class="logo" [routerLink]="['/']" />
-  <div class="loc">
-    <mat-icon></mat-icon>
-    <p>Movie-up</p>
+  <div class="name">
+    <p [routerLink]="['/']">MovieUp</p>
   </div>
 
   <div class="navbar">
@@ -30,8 +29,7 @@
       <button mat-menu-item [routerLink]="['/listar-critica']">Últimas avaliações</button>
     </mat-menu>
   </div>
-  <button mat-button class="menu-text"  [routerLink]="['/listar-favoritos']">FAVORITOS</button>
-  <button mat-icon-button  [matMenuTriggerFor]="menuUsuario"  >
+  <button mat-icon-button  [matMenuTriggerFor]="menuUsuario">
     <mat-icon>person</mat-icon>
     <mat-menu #menuUsuario="matMenu">
       <button mat-menu-item [routerLink]="['/login']">Login</button>
