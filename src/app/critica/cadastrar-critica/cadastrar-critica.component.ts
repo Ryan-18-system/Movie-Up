@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Critica } from 'src/app/shared/model/criticas';
 import { CriticasService } from 'src/app/shared/service/criticas.service';
-import {MenssageService} from "../../shared/service/menssage.service";
+import {MensagemService} from "../../shared/service/mensagem.service";
 
 @Component({
   selector: 'app-cadastrar-critica',
@@ -12,7 +12,7 @@ export class CadastrarCriticaComponent implements OnInit {
 
   critica: Critica;
 
-  constructor(private criticaService: CriticasService, private menssageService: MenssageService) {
+  constructor(private criticaService: CriticasService, private mensagemService: MensagemService) {
     this.critica = new Critica;
   }
 
@@ -21,7 +21,7 @@ export class CadastrarCriticaComponent implements OnInit {
 
   inserir(): void {
     this.criticaService.inserir(this.critica).subscribe(
-      critica => this.menssageService.success("Crítica cadastrada com sucesso")
+      critica => this.mensagemService.success("Crítica cadastrada com sucesso")
       )
     this.critica = new Critica()
   }

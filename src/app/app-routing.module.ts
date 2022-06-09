@@ -1,4 +1,3 @@
-import { ListarFavoritosComponent } from './favoritos/listar-favoritos/listar-favoritos.component';
 import { CadastrarCriticaComponent } from './critica/cadastrar-critica/cadastrar-critica.component';
 import { ListarCriticaComponent } from './critica/listar-critica/listar-critica.component';
 import { MaisEsperadosComponent } from './filme/mais-esperados/mais-esperados.component';
@@ -10,7 +9,6 @@ import {HomeComponent} from "./layout/home/home.component";
 import {LoginComponent} from "./login/login/login.component";
 import {CadastrarUsuarioComponent} from "./usuario/cadastrar-usuario/cadastrar-usuario.component";
 import {DetalheComponent} from "./detalhe/detalhe.component";
-import {AddFavoritosComponent} from "./favoritos/add-favoritos/add-favoritos.component";
 import {BuscarFilmesComponent} from "./filme/buscar-filmes/buscar-filmes.component";
 import {BuscarCinemaComponent} from "./cinema/buscar-cinema/buscar-cinema.component";
 import { BuscarSeriesComponent } from './serie/buscar-series/buscar-series.component';
@@ -57,10 +55,6 @@ const routes: Routes = [
     component: DetalheComponent
   },
   {
-    path: 'favoritos',
-    component: AddFavoritosComponent
-  },
-  {
     path: 'buscarfilme',
     component: BuscarFilmesComponent
   },
@@ -88,10 +82,6 @@ const routes: Routes = [
     path: 'buscar-cinema',
     component: BuscarCinemaComponent
   },
-  {
-  path: 'listar-favoritos',
-  component: ListarFavoritosComponent
-  }
 ];
 
 @NgModule({
