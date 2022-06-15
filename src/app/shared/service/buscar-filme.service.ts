@@ -7,7 +7,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class BuscarFilmeService {
-  URL_FILME = 'http://localhost:8082/filmes'
+  URL_FILME = 'http://localhost:8082/filmes/titulo'
   constructor(private  httpClient: HttpClient) { }
 
   buscarFilme(filme:string): Observable<Filme[]> {
