@@ -10,6 +10,15 @@
       <mat-option value="PB" #PB (click)="buscarCidadePorEstado(PB.value)">PB</mat-option>
       <mat-option value="AM" #AM (click)="buscarCidadePorEstado(AM.value)">AM</mat-option>
       <mat-option value="DF" #DF (click)="buscarCidadePorEstado(DF.value)">DF</mat-option>
+      <mat-option value="AC" #AC (click)="buscarCidadePorEstado(AC.value)">AC</mat-option>
+      <mat-option value="AL" #AL (click)="buscarCidadePorEstado(AL.value)">AL</mat-option>
+      <mat-option value="AP" #AP (click)="buscarCidadePorEstado(AP.value)">AP</mat-option>
+      <mat-option value="BA" #BA (click)="buscarCidadePorEstado(BA.value)">BA</mat-option>
+      <mat-option value="ES" #ES (click)="buscarCidadePorEstado(ES.value)">ES</mat-option>
+      <mat-option value="GO" #GO (click)="buscarCidadePorEstado(GO.value)">GO</mat-option>
+      <mat-option value="MT" #MT (click)="buscarCidadePorEstado(MT.value)">MT</mat-option>
+      <mat-option value="MA" #MA (click)="buscarCidadePorEstado(MA.value)">MA</mat-option>
+      <mat-option value="MS" #MS (click)="buscarCidadePorEstado(MS.value)">MS</mat-option>
     </mat-select>
   </mat-form-field>
   <mat-form-field appearance="fill">
@@ -23,18 +32,20 @@
     <mat-select matNativeControl required>
       <mat-option value="{{cinema.urlKey}}"   *ngFor="let cinema of cinemas" (click)="buscarFilmePorCinema(cinema.cityId, cinema.urlKey)"> {{cinema.urlKey}} </mat-option>
     </mat-select>
-
   </mat-form-field>
-  <mat-card *ngFor="let filme of filmesCinemas">
-    <mat-card-header>
-      <mat-card-title>{{filme.title}}</mat-card-title>
-      <mat-card-subtitle >Gênero:{{filme.genres}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content><button><a href="{{filme.nationalSiteURL}}" target="_blank">Comprar ingresso</a></button></mat-card-content>
-  </mat-card>
-
-
-
+  <div fxLayout="row" fxLayoutAlign="center none" class="cards-filmes">
+    <mat-card *ngFor="let filme of filmesCinemas" class="cards">
+      <mat-card-header>
+        <mat-card-title>{{filme.title}}</mat-card-title>
+        <mat-card-subtitle>Gênero: {{filme.genres}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <button mat-button class="btn-comprar">
+          <a href="{{filme.nationalSiteURL}}" target="_blank">Comprar ingresso</a>
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
 
 </div>
 

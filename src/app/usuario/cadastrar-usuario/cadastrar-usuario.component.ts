@@ -4,7 +4,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {Usuario} from "../../shared/model/usuario";
 import {UsuarioService} from "../../shared/service/usuario.service";
 
-import {MenssageService} from "../../shared/service/menssage.service";
+import {MensagemService} from "../../shared/service/mensagem.service";
 
 @Component({
   selector: 'app-cadastrar-usuario',
@@ -29,7 +29,7 @@ export class CadastrarUsuarioComponent implements OnInit {
   constructor(private rotalAtual: ActivatedRoute,
               private usuarioService: UsuarioService,
               private roteador: Router,
-              private menssageService: MenssageService
+              private mensagemService: MensagemService
   ) {
     this.usuario = new Usuario();
     // if (this.rotalAtual.snapshot.paramMap.has('id')) {
@@ -47,12 +47,12 @@ export class CadastrarUsuarioComponent implements OnInit {
 
   inserirUsuario(): void {
     if(this.usuario.nome == null || this.usuario.senha == null){
-      this.menssageService.warning("Campos Vazios")
+      this.mensagemService.warning("Campos Vazios")
     }else{
       this.usuarioService.inserir(this.usuario).subscribe(
         usuarioInserido => {
           console.log(usuarioInserido);
-          this.menssageService.success('Usuário inserido com sucesso com sucesso!');
+          this.mensagemService.success('Usuário inserido com sucesso com sucesso!');
           this.roteador.navigate(['login'])
         }
       )

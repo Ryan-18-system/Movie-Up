@@ -1,19 +1,18 @@
+import { FilmeService } from 'src/app/shared/service/filmes.service';
 import { Component, OnInit } from '@angular/core';
-import { Detalhe } from 'src/app/shared/model/detalhe';
-import { DetalheService } from 'src/app/shared/service/detalhe.service';
+import { Filme } from '../shared/model/Filme';
 @Component({
   selector: 'app-detalhe',
   templateUrl: './detalhe.component.html',
   styleUrls: ['./detalhe.component.css']
 })
 export class DetalheComponent implements OnInit {
-  detalhe: Array<Detalhe> = []
-  constructor(private detalheService: DetalheService) { }
+  filmes: Array<Filme> = [];
+  constructor(private filmeService: FilmeService) { }
 
   ngOnInit(): void {
-    // @ts-ignore
-    this.detalheService.buscarDetalhe().subscribe(
-      detalhe => this.detalhe = detalhe
+    this.filmeService.listarDetalhes().subscribe(
+      filmes => this.filmes = filmes
 
     );
   }

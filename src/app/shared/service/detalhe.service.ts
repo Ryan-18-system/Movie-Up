@@ -8,7 +8,7 @@ import {Detalhe} from "../model/detalhe";
 })
 export class DetalheService {
 
-  URL_DETALHE = 'http://localhost:3000/detalhes';
+  URL_DETALHE = 'http://localhost:8082/filmes/detalhes';
   constructor(private httpClient: HttpClient) { }
   //get
   buscarDetalhe(): Observable<Detalhe[]> {

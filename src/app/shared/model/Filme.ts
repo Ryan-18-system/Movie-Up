@@ -1,5 +1,5 @@
 export class Filme{
-  id?: string;
+  id?: number;
   titulo?: string;
   imagem?: string;
   dataLancamento?: number;
@@ -15,7 +15,7 @@ export class Filme{
   aclamados?: string;
   esperados?: string;
 
-  constructor(id?: string, filme: Filme = {}) {
+  constructor(id?: number, filme: Filme = {}) {
     this.id = id;
     this.titulo = filme.titulo;
     this.imagem = filme.imagem;

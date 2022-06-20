@@ -12,14 +12,19 @@ export class HomeComponent implements OnInit {
   filmes: Array<Filme> = [];
 
   favoritos = [
-    {img: 'https://www.themoviedb.org/t/p/original/rvtdN5XkWAfGX6xDuPL6yYS2seK.jpg'},
-    {img: 'https://www.themoviedb.org/t/p/original/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg'},
-    {img: 'https://www.themoviedb.org/t/p/original/xvIAeAyXakMHPOgU7URp1kqKQZI.jpg'},
+    {imagem: 'https://www.themoviedb.org/t/p/original/rvtdN5XkWAfGX6xDuPL6yYS2seK.jpg'},
+    {imagem: 'https://www.themoviedb.org/t/p/original/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg'},
+    {imagem: 'https://www.themoviedb.org/t/p/original/xvIAeAyXakMHPOgU7URp1kqKQZI.jpg'},
   ]
 
-  constructor(private filmeService: FilmeService) { }
+  constructor(private filmeService: FilmeService) {
+  }
 
   ngOnInit(): void {
+    this.filmeService.listarFavoritos().subscribe(
+      filmes => this.filmes = filmes
+    )
+
     this.filmeService.listarEmalta().subscribe(
       filmes => this.filmes = filmes
     );
