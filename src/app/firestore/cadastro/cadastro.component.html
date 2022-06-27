@@ -9,13 +9,6 @@
   </mat-form-field>
 
   <mat-form-field appearance="outline" class="input-cadastro">
-    <mat-label>Selecione sua Categoria</mat-label>
-    <mat-select>
-      <mat-option value="comum"  >Usuário Comum</mat-option>
-      <mat-option value="critico" >Crítico de Cinema</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field appearance="outline" class="input-cadastro">
     <mat-label>Digite seu Email</mat-label>
     <input matInput placeholder="user@example.com" [formControl]="email" required [(ngModel)]="usuario.email">
     <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
@@ -27,5 +20,5 @@
       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
   </mat-form-field>
-  <button mat-flat-button color="accent" (click)="inserirUsuario()">Cadastrar</button>
+  <button mat-flat-button color="accent" (click)="cadastrarUsuario()">Cadastrar</button>
 </div>

@@ -13,6 +13,7 @@
   font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
 
+
 .input-cadastro{
   width: 300px;
   color: whitesmoke;
@@ -21,4 +22,3 @@
 mat-label{
   color: whitesmoke;
 }
-
