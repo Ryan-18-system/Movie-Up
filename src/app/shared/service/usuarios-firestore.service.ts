@@ -4,6 +4,7 @@ import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firest
 import {map} from 'rxjs/operators';
 import { Usuario } from '../model/usuario';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -25,17 +26,5 @@ export class UsuariosFirestoreService {
     return from(this.colecaoUsuarios.add(Object.assign({}, usuario)));
   }
 
-  remover(id: string): Observable<void> {
-    return from(this.colecaoUsuarios.doc(id).delete());
-  }
-
-  pesquisarPorId(id: string): Observable<Usuario> {
-    return this.colecaoUsuarios.doc(id).get().pipe(map(document => new Usuario(document.id, document.data())));
-  }
-
-  atualizar(usuario: Usuario): Observable<void> {
-    delete usuario.id;
-    return from(this.colecaoUsuarios.doc(usuario.id).update(Object.assign({}, usuario)));
-  }
 
 }

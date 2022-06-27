@@ -6,8 +6,7 @@ import { FilmesDaSemanaComponent } from './filme/filmes-da-semana/filmes-da-sema
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from "./layout/home/home.component";
-import {LoginComponent} from "./login/login/login.component";
-import {CadastrarUsuarioComponent} from "./usuario/cadastrar-usuario/cadastrar-usuario.component";
+
 import {DetalheComponent} from "./detalhe/detalhe.component";
 import {BuscarFilmesComponent} from "./filme/buscar-filmes/buscar-filmes.component";
 import {BuscarCinemaComponent} from "./cinema/buscar-cinema/buscar-cinema.component";
@@ -15,20 +14,14 @@ import { BuscarSeriesComponent } from './serie/buscar-series/buscar-series.compo
 import { EmAltaComponent } from './serie/em-alta/em-alta.component';
 import { LancamentosComponent } from './serie/lancamentos/lancamentos.component';
 import { VencedorasComponent } from './serie/vencedoras/vencedoras.component';
+import {CadastroComponent} from "./firestore/cadastro/cadastro.component";
+import {LoginComponent} from "./firestore/login/login.component";
 
 
 const routes: Routes = [
   {
   path:'',
   component: HomeComponent
-  },
-  {
-    path:'login',
-    component: LoginComponent
-  },
-  {
-    path:'cadastrarusuario',
-    component: CadastrarUsuarioComponent
   },
   {
     path:'filmes-da-semana',
@@ -75,13 +68,17 @@ const routes: Routes = [
     component: VencedorasComponent
   },
   {
-    path: 'cadastrar-usuario/:id',
-    component: CadastrarUsuarioComponent
-  },
-  {
     path: 'buscar-cinema',
     component: BuscarCinemaComponent
   },
+  {
+    path: 'cadastro',
+    component: CadastroComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  }
 ];
 
 @NgModule({
