@@ -16,8 +16,13 @@ export class UsuariosFirestoreService {
 
   constructor(private afs: AngularFirestore, private mensagemService: MensagemService) {
     this.colecaoUsuarios = afs.collection(this.NOME_COLECAO);
+
   }
 
+
+  listar(): Observable<Usuario[]> {
+    return this.colecaoUsuarios.valueChanges({idField: 'id'});
+  }
 
 
   inserir(usuario: Usuario): Observable<Usuario> {

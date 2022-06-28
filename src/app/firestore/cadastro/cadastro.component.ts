@@ -14,24 +14,29 @@ import {UsuariosFirestoreService} from "../../shared/service/usuarios-firestore.
 export class CadastroComponent implements OnInit {
   hide = true;
   usuario = new Usuario()
-
+  arrayDeUsuarios: Usuario[]
+  arrayDeEmail: Array<any>;
   email = new FormControl('', [Validators.required, Validators.email]);
-  constructor( private mensagemService: MensagemService, private usuarioFirestore: UsuariosFirestoreService) {
 
+  constructor( private mensagemService: MensagemService,
+               private usuarioFirestore: UsuariosFirestoreService) {
+    this.arrayDeUsuarios = new Array<Usuario>()
+    this.arrayDeEmail = new Array<any>()
   }
 
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
   ngOnInit(): void {
+    this.checarEmail()
   }
+
   cadastrarUsuario(){
+    this.checarEmail()
     if(this.usuario.nome === undefined || this.usuario.senha === undefined || this.usuario.email === undefined){
       this.mensagemService.warning('Campos em branco. Por favor, preencha todos os campos')
+    }
+
+    if(this.arrayDeEmail.includes(this.usuario.email)){
+      this.mensagemService.error('Erro ao cadastrar usuário, email já existe')
     }else{
       this.usuarioFirestore.inserir(this.usuario).subscribe(
         {
@@ -45,6 +50,28 @@ export class CadastroComponent implements OnInit {
       )
     }
 
+  }
+  private checarEmail(){
+    this.usuarioFirestore.listar().subscribe(
+      {
+        next: value =>{
+          this.arrayDeUsuarios = value
+        } ,
+        error: err => console.log(err)
+
+      }
+    )
+   this.arrayDeUsuarios.forEach((value)=>{
+     this.arrayDeEmail.push(value.email)
+   })
+  }
+
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'You must enter a value';
+    }
+
+    return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
 
