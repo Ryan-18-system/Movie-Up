@@ -5,8 +5,11 @@
   margin: 0;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  background: linear-gradient(to left, #320443, #7100A7)}
-
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #d3adf0;
+}
 
 snack-bar-container.success {
   background-color: #71b270;
