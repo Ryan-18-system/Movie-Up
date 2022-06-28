@@ -28,6 +28,8 @@ export class HomeComponent implements OnInit {
     this.filmeService.listarEmalta().subscribe(
       filmes => this.filmes = filmes
     );
+
+
   }
 
 }

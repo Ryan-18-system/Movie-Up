@@ -17,6 +17,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {AngularFireModule} from "@angular/fire";
 
 import {FirebaseConfig} from "../../firebase.config";
+import {AngularFireAuthModule} from "@angular/fire/auth";
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import {FirebaseConfig} from "../../firebase.config";
         MatSnackBarModule,
         FirestoreModule,
         AngularFireModule.initializeApp(FirebaseConfig),
+        AngularFireAuthModule
 
 
     ],

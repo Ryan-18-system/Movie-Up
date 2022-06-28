@@ -34,6 +34,7 @@
     <mat-menu #menuUsuario="matMenu">
       <button mat-menu-item [routerLink]="['/login']">Login</button>
       <button mat-menu-item [routerLink]="['/cadastro']" >Cadastre-se</button>
+      <button mat-menu-item [routerLink]="['/']" (click)="logout()">logout</button>
     </mat-menu>
   </button>
 

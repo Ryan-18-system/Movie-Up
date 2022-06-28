@@ -16,8 +16,9 @@ import { LancamentosComponent } from './serie/lancamentos/lancamentos.component'
 import { VencedorasComponent } from './serie/vencedoras/vencedoras.component';
 import {CadastroComponent} from "./firestore/cadastro/cadastro.component";
 import {LoginComponent} from "./firestore/login/login.component";
+import {AngularFireAuthGuard, redirectUnauthorizedTo} from "@angular/fire/auth-guard";
 
-
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 const routes: Routes = [
   {
   path:'',
@@ -41,7 +42,9 @@ const routes: Routes = [
   },
   {
     path:'cadastrar-critica',
-    component: CadastrarCriticaComponent
+    component: CadastrarCriticaComponent,
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectUnauthorizedToLogin }
   },
   {
     path:'detalhes/:id',
@@ -69,7 +72,7 @@ const routes: Routes = [
   },
   {
     path: 'buscar-cinema',
-    component: BuscarCinemaComponent
+    component: BuscarCinemaComponent,
   },
   {
     path: 'cadastro',
