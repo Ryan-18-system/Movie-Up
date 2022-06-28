@@ -2,6 +2,7 @@
 
 .navbar{
   margin: auto;
+
 }
 
 .logo{
@@ -45,4 +46,7 @@
     flex-direction: column;
    }
 
+}
+.mat-toolbar{
+  background-color:#8f74c8;
 }

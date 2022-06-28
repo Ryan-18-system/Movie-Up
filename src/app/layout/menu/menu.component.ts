@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Filme } from 'src/app/shared/model/Filme';
+import {AuthService} from "../../shared/service/auth.service";
+import {MensagemService} from "../../shared/service/mensagem.service";
 
 @Component({
   selector: 'app-menu',
@@ -8,11 +9,14 @@ import { Filme } from 'src/app/shared/model/Filme';
 })
 
 export class MenuComponent implements OnInit {
-  listaFilmes: Array<Filme> = [];
 
-  constructor() { }
+  constructor(private authService: AuthService, private mensagemService : MensagemService) { }
 
   ngOnInit(): void {
   }
 
+  logout(){
+    this.authService.logout()
+    this.mensagemService.success('Logout executado com sucesso, volte sempre!')
+  }
 }
