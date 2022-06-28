@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {from, Observable} from 'rxjs';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
-import {map} from 'rxjs/operators';
+
 import { Usuario } from '../model/usuario';
 import {MensagemService} from "./mensagem.service";
 
@@ -18,9 +18,7 @@ export class UsuariosFirestoreService {
     this.colecaoUsuarios = afs.collection(this.NOME_COLECAO);
   }
 
-  listar(): Observable<Usuario[]> {
-    return this.colecaoUsuarios.valueChanges({idField: 'id'});
-  }
+
 
   inserir(usuario: Usuario): Observable<Usuario> {
       delete usuario.id;
