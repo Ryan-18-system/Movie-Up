@@ -9,7 +9,6 @@ import { Filme } from '../model/Filme';
 
 export class FilmeService {
   URL_FILMES = 'http://localhost:8082/filmes';
-  URL_DETALHES = 'http://localhost:8082/detalhes';
 
 
   constructor(private httpClient: HttpClient) { }
@@ -18,8 +17,8 @@ export class FilmeService {
     return this.httpClient.get<Filme[]>(this.URL_FILMES);
   }
 
-  listarDetalhes(): Observable<Filme[]>{
-    return this.httpClient.get<Filme[]>(this.URL_DETALHES);
+  listarById(id: number): Observable<Filme>{
+    return this.httpClient.get<Filme>(`${this.URL_FILMES}/${id}`);
   }
 
   listarEmalta(): Observable<Filme[]> {

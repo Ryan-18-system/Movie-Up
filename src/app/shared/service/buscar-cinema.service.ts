@@ -16,9 +16,13 @@ export class BuscarCinemaService {
   constructor(private  httpClient: HttpClient) { }
 
 
+  buscarEstado():Observable<Estado[]> {
+    return this.httpClient.get<Estado[]>(this.URl_ESTADO);
+  }
   buscarCinemaPorEstado(estado:string): Observable<Estado> {
     const cidades = `${this.URl_ESTADO}${estado}`
     return this.httpClient.get<Estado>(cidades);
+
   }
 
   buscarCinemaPeloIdCidade(id:string): Observable<Cidade[]>{

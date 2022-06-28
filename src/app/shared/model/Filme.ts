@@ -1,3 +1,5 @@
+import { Critica } from "./criticas";
+
 export class Filme{
   id?: number;
   titulo?: string;
@@ -14,6 +16,8 @@ export class Filme{
   semana?: string;
   aclamados?: string;
   esperados?: string;
+  criticas?: Array<Critica>;
+  filme?: Array<Filme>;
 
   constructor(id?: number, filme: Filme = {}) {
     this.id = id;
@@ -31,6 +35,8 @@ export class Filme{
     this.semana = filme.semana;
     this.aclamados = filme.aclamados;
     this.esperados  = filme.esperados;
+    this.criticas = filme.criticas;
+    this.filme = filme.filme;
   }
 
 }

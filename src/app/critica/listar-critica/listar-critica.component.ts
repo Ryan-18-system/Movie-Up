@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Critica } from 'src/app/shared/model/criticas';
+import { Filme } from 'src/app/shared/model/Filme';
 import { CriticasService } from 'src/app/shared/service/criticas.service';
 import {MensagemService} from "../../shared/service/mensagem.service";
 
@@ -15,13 +16,20 @@ export class ListarCriticaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.criticaService.listar().subscribe(
-      criticas => this.criticas = criticas
-    );
   }
 
-  editar(critica: Critica): void {
-    critica.nomeDaObra += ' Alterado';
+  listar(filme: Filme): void{
+    this.criticaService.listar(filme.id || 0).subscribe(
+      criticas => this.criticas = criticas
+    )
+  }
+
+  listarCriticas(id: number){
+    this.criticaService.listar(id).subscribe(
+      critica =>
+      {this.criticas = critica
+        console.log(critica)}
+    )
   }
 
   remover(critica: Critica): void {

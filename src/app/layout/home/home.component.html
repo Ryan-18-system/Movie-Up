@@ -1,7 +1,7 @@
 <h1 class="text-section">Favoritos da galera</h1>
 <div fxLayout="row" fxLayoutAlign="center none" class="cards-fav">
   <div *ngFor="let card of favoritos" class="favoritos">
-    <img src="{{card.imagem}}">
+    <img src="{{card.imagem}}" alt="poster filme">
   </div>
 
 </div>
@@ -9,7 +9,7 @@
 <h1 class="text-section">Em alta</h1>
 <div fxLayout="row" fxLayoutAlign="center none" class="cards-emalta">
   <div *ngFor="let card of filmes" class="emalta">
-    <img src="{{card.imagem}}" width="280" height="300">
+    <img src="{{card.imagem}}" width="280" height="300" alt="poster filme" (click)="listarById(card.id || 0)">
   </div>
 
 </div>

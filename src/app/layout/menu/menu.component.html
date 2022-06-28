@@ -25,7 +25,6 @@
     </mat-menu>
     <button mat-button class="menu-text" [matMenuTriggerFor]="criticas">CRÍTICAS</button>
     <mat-menu #criticas="matMenu">
-      <button mat-menu-item [routerLink]="['/cadastrar-critica']" >Fazer uma Avaliação</button>
       <button mat-menu-item [routerLink]="['/listar-critica']">Últimas avaliações</button>
     </mat-menu>
   </div>

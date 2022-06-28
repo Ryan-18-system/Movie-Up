@@ -43,11 +43,11 @@ const routes: Routes = [
     component: MaisEsperadosComponent
   },
   {
-    path:'listar-critica',
+    path:'listar-critica/:id',
     component: ListarCriticaComponent
   },
   {
-    path:'cadastrar-critica',
+    path:'addcritica/:id',
     component: CadastrarCriticaComponent
   },
   {

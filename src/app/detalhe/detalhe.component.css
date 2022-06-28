@@ -1,22 +1,25 @@
 .detalhe{
   margin-top: 50px;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .sinopse{
   padding-top: 10px;
 
 }
 .informacoes{
-
   display: flex;
   flex-direction: row;
 }
+
 img{
   padding-right: 10px;
 }
 .mat-card-listagem{
   width: 480px;
-  height: 480px;
+  height: 400px;
   background-color:#320443;
   margin-left: 20px ;
   margin-top: 10px;
@@ -34,4 +37,36 @@ img{
 }
 .estrelas input[type=radio]:checked ~ label i.fa:before {
   color: #CCC;
+}
+
+.btn-critica{
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #FFCC00;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+
+.mat-card-criticas{
+  width: 500px;
+  height: 380px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color:#320443;
+  margin-right: 60px;
+}
+
+.criticas-title{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.criticas-div{
+  margin-top:30px;
+  background-color: rgb(108, 0, 126);
+}
+
+.none{
+  display: none;
 }
