@@ -3,6 +3,7 @@ import {from, Observable} from 'rxjs';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
 import {map} from 'rxjs/operators';
 import { Usuario } from '../model/usuario';
+import {MensagemService} from "./mensagem.service";
 
 
 @Injectable({
@@ -13,7 +14,7 @@ export class UsuariosFirestoreService {
   colecaoUsuarios: AngularFirestoreCollection<Usuario>;
   NOME_COLECAO = 'usuarios';
 
-  constructor(private afs: AngularFirestore) {
+  constructor(private afs: AngularFirestore, private mensagemService: MensagemService) {
     this.colecaoUsuarios = afs.collection(this.NOME_COLECAO);
   }
 
@@ -22,8 +23,8 @@ export class UsuariosFirestoreService {
   }
 
   inserir(usuario: Usuario): Observable<Usuario> {
-    delete usuario.id;
-    return from(this.colecaoUsuarios.add(Object.assign({}, usuario)));
+      delete usuario.id;
+      return from(this.colecaoUsuarios.add(Object.assign({}, usuario)));
   }
 
 
