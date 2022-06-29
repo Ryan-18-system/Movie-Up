@@ -15,16 +15,15 @@ export class CadastrarCriticaComponent implements OnInit {
   critica: Critica;
   filme: Array<Filme> = [];
 
-  constructor(private criticaService: CriticasService, private mensagemService: MensagemService, private filmeService: FilmeService) {
+  constructor(private criticaService: CriticasService, private mensagemService: MensagemService) {
     this.critica = new Critica;
   }
 
   ngOnInit(): void {
   }
 
-  inserir(id: number, mensagem: string ): void {
-
-    this.criticaService.inserir(id, mensagem ).subscribe(
+  inserir(id: number, nomeDoCritico: string, mensagem: string ): void {
+    this.criticaService.inserir(id, nomeDoCritico, mensagem).subscribe(
       critica => {
         this.mensagemService.success("Crítica cadastrada com sucesso")
         console.log(critica)
