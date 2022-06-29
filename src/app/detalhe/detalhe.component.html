@@ -34,7 +34,7 @@
         <input type="radio" id="cm_star-5" name="fb" value="5"/>
       </div>
       <mat-card-footer>
-        <button mat-button class="btn-critica" [routerLink]="['/addcritica', filme.id]">Adicionar crítica</button>
+        <button mat-button class="btn-critica" [routerLink]="['/criticas', filme.id]">Adicionar crítica</button>
         <button mat-button class="btn-critica" (click)="listarCriticas(filme.id || 0)">Listar críticas</button>
       </mat-card-footer>
     </mat-card>
@@ -45,6 +45,9 @@
       <div *ngFor="let c of critica" class="criticas-div">
         <mat-card-subtitle>Critico: {{c.nomeDoCritico}}</mat-card-subtitle>
         <mat-card-content>{{c.mensagem}}</mat-card-content>
+        <mat-card-actions class="actions">
+          <button mat-icon-button (click)="remover(criticas)"><mat-icon class="lixo">delete</mat-icon></button>
+        </mat-card-actions>
       </div>
     </mat-card>
   </div>
