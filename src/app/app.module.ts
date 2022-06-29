@@ -18,6 +18,7 @@ import {AngularFireModule} from "@angular/fire";
 
 import {FirebaseConfig} from "../../firebase.config";
 import {AngularFireAuthModule} from "@angular/fire/auth";
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import {AngularFireAuthModule} from "@angular/fire/auth";
         AppRoutingModule,
         LayoutModule,
         BrowserAnimationsModule,
+        MatIconModule,
         FilmeModule,
         SerieModule,
         CinemaModule,

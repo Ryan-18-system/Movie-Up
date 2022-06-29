@@ -41,7 +41,7 @@ const routes: Routes = [
     component: ListarCriticaComponent
   },
   {
-    path:'cadastrar-critica/:id',
+    path:'criticas/:id',
     component: CadastrarCriticaComponent,
     canActivate: [AngularFireAuthGuard],
     data: { authGuardPipe: redirectUnauthorizedToLogin }
