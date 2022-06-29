@@ -14,7 +14,7 @@ export class VencedorasComponent implements OnInit {
   constructor(private serieService: SerieService) { }
 
   ngOnInit(): void {
-    this.serieService.listarEmalta().subscribe(
+    this.serieService.listarVencedoras().subscribe(
       series => this.series = series
     )
   }
