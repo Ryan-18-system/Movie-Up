@@ -32,15 +32,15 @@ export class ListarCriticaComponent implements OnInit {
     )
   }
 
-  remover(critica: Critica): void {
-    this.criticaService.remover(critica.id || 0).subscribe(
-      resposta => {
-        const indxCriticaARemover = this.criticas.findIndex(u => u.mensagem === critica.mensagem);
-        if (indxCriticaARemover > -1) {
-          this.criticas.splice(indxCriticaARemover, 1);
-          this.mensagemService.success("Crítica removida com sucesso")
-        }
-      }
-    )
-  }
+  // remover(critica: Critica): void {
+  //   this.criticaService.remover(critica.id || 0).subscribe(
+  //     resposta => {
+  //       const indxCriticaARemover = this.criticas.findIndex(u => u.mensagem === critica.mensagem);
+  //       if (indxCriticaARemover > -1) {
+  //         this.criticas.splice(indxCriticaARemover, 1);
+  //         this.mensagemService.success("Crítica removida com sucesso")
+  //       }
+  //     }
+  //   )
+  // }
 }

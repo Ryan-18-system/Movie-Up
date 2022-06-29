@@ -8,7 +8,7 @@
 
     <mat-form-field class="mat-form-simples">
       <mat-label>Nome do Crítico</mat-label>
-      <input matInput [(ngModel)]="critica.nomeDoCritico" placeholder="Digite seu nome" type="text" #nome>
+      <input matInput [(ngModel)]="critica.nomeDoCritico" placeholder="Digite seu nome" type="text" #nomeDoCritico>
     </mat-form-field>
     <mat-form-field  class="mat-form-simples">
       <mat-label>Avaliar</mat-label>
@@ -17,7 +17,7 @@
 
   </mat-card-content>
   <mat-card-footer class="mat-card-footer-grid">
-    <button mat-stroked-button color="white" (click)="inserir( critica.id_filme || 1, mensagem.value)" class="button-footer" >
+    <button mat-stroked-button color="white" (click)="inserir( critica.id_filme, nomeDoCritico.value, mensagem.value)" class="button-footer" >
       AVALIAR
     </button>
   </mat-card-footer>

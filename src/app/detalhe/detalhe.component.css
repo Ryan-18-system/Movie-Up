@@ -50,7 +50,7 @@ img{
 
 .mat-card-criticas{
   width: 500px;
-  height: 380px;
+  height: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   background-color:#320443;
@@ -67,6 +67,9 @@ img{
   background-color: rgb(108, 0, 126);
 }
 
-.none{
-  display: none;
+.actions{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-right: 15px;;
 }
