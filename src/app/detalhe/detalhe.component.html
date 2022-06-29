@@ -42,11 +42,13 @@
   <div class="listagem-criticas">
     <mat-card class="mat-card-criticas">
       <mat-card-title class="criticas-title">Criticas</mat-card-title>
-      <div *ngFor="let c of critica" class="criticas-div">
+      <div *ngFor="let c of criticas" class="criticas-div">
         <mat-card-subtitle>Critico: {{c.nomeDoCritico}}</mat-card-subtitle>
         <mat-card-content>{{c.mensagem}}</mat-card-content>
         <mat-card-actions class="actions">
-          <button mat-icon-button (click)="remover(criticas)"><mat-icon class="lixo">delete</mat-icon></button>
+          <button mat-icon-button (click)="remover(c.id || 0)"><mat-icon class="lixo">delete</mat-icon></button>
+          <button mat-icon-button (click)="atualizar(c.id || 0, c.nomeDoCritico || '', c.mensagem || '')"[routerLink]="['/criticas', filme.id]"><mat-icon class="att">edit</mat-icon></button>
+
         </mat-card-actions>
       </div>
     </mat-card>

@@ -14,11 +14,9 @@ export class CriticasService {
   URL_CRITICAS_SERIE = 'http://localhost:8082/series/criticas';
   URL_FILME = 'http://localhost:8082/filmes';
 
-  httpOptions = {
-    headers: new HttpHeaders({'Content-Type':'application/json; charset=utf-8'})
-  }
 
   constructor(private httpClient: HttpClient) {
+
   }
 
   //get
@@ -35,17 +33,21 @@ export class CriticasService {
     };
 
     JSON.stringify(criticaObj);
-    JSON.stringify(criticaObj, ['nomeDoCritico', 'mensagem'])
 
-    return this.httpClient.post<Critica>(`${this.URL_CRITICAS_FILME}/${id}`, criticaObj, this.httpOptions);
-
+    return this.httpClient.post<Critica>(`${this.URL_CRITICAS_FILME}/${id}`, criticaObj);
   }
 
-  atualizar(critica: Critica): Observable<Critica> {
-    return this.httpClient.put<Critica>(`${this.URL_CRITICAS_FILME}/${critica.id}`, critica);
+  atualizar(id: number,  nomeDoCritico: string, mensagem: string): Observable<Critica> {
+    const criticaObj = {
+      nomeDoCritico: nomeDoCritico,
+      mensagem: mensagem
+    };
+    JSON.stringify(criticaObj);
+
+    return this.httpClient.put<Critica>(`${this.URL_CRITICAS_FILME}/${id}`, criticaObj);
   }
 
-  remover(critica: Critica): Observable<Object>{
-    return this.httpClient.delete(`${this.URL_FILME}/${critica.id_filme}/criticas/${critica.id}`);
+  remover(id_filme: number, id: number): Observable<Object>{
+    return this.httpClient.delete(`${this.URL_FILME}/${id_filme}/criticas/${id}`);
   }
 }

@@ -17,14 +17,18 @@ export class DetalheComponent implements OnInit {
 
   filme: Filme;
   filmes: Array<Filme> = [];
-  critica: Array<Critica> = [];
-  criticas: Critica;
-
+  criticas: Array<Critica> = [];
+  critica: Critica;
+  idFilme: string | null;
+  idCritica: string | null;
   constructor(private filmeService: FilmeService,
     private criticaService: CriticasService,
     private mensagemService: MensagemService,
     private roteador: Router, private rotaAtual: ActivatedRoute) {
-      this.criticas = new Critica();
+      this.idFilme = '';
+      this.idCritica = '';
+
+      this.critica = new Critica();
       this.filme = new Filme();
       if (this.rotaAtual.snapshot.paramMap.has('id')){
         const idParaFilme = this.rotaAtual.snapshot.paramMap.get('id');
@@ -34,6 +38,10 @@ export class DetalheComponent implements OnInit {
     }
 
   ngOnInit(): void {
+    if (this.rotaAtual.snapshot.paramMap.has('id')){
+      this.idFilme = this.rotaAtual.snapshot.paramMap.get('id');
+    }
+
   }
 
   listarById(id: number){
@@ -49,24 +57,34 @@ export class DetalheComponent implements OnInit {
   listarCriticas(id: number){
     this.criticaService.listar(id).subscribe(
       critica =>
-      {this.critica = critica
+      {this.criticas = critica
         console.log(critica)}
     )
   }
 
-  remover(criticas: Critica): void {
-    this.criticaService.remover(criticas).subscribe(
+  remover(id: number): void {
+    this.criticaService.remover(Number(this.idFilme), id).subscribe(
       resposta => {
-        const indxCriticaARemover = this.critica.findIndex(u => u.mensagem === criticas.mensagem);
+        const indxCriticaARemover = this.criticas.findIndex(u => u.id === this.criticas[0].id);
+
         if (indxCriticaARemover > -1) {
-          this.critica.splice(indxCriticaARemover, 1);
+          this.criticas.splice(indxCriticaARemover, 1);
           this.mensagemService.success("Crítica removida com sucesso")
         }
       }
+
     )
   }
 
+  atualizar(id: number = Number(this.idFilme) , nomeDoCritico: string, mensagem: string ): void {
+    this.criticaService.atualizar(id, nomeDoCritico, mensagem).subscribe(
+      critica => {
+        this.mensagemService.success("Crítica atualizada com sucesso")
+        console.log(critica)
+        console.log(id)
+      }
+      )
+    this.critica = new Critica()
+  }
+
 }
-
-
-
