@@ -15,6 +15,7 @@ import { DetalheComponent } from './detalhe/detalhe.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {AngularFireModule} from "@angular/fire";
+import {MatButtonModule} from '@angular/material/button';
 
 import {FirebaseConfig} from "../../firebase.config";
 import {AngularFireAuthModule} from "@angular/fire/auth";
@@ -32,6 +33,7 @@ import { MatIconModule } from '@angular/material/icon';
         LayoutModule,
         BrowserAnimationsModule,
         MatIconModule,
+        MatButtonModule,
         FilmeModule,
         SerieModule,
         CinemaModule,
