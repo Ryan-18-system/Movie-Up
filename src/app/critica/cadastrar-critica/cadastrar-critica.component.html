@@ -20,11 +20,15 @@
     <button mat-stroked-button color="white" (click)="inserir( critica.id_filme, nomeDoCritico.value, mensagem.value)" class="button-footer" >
       AVALIAR
     </button>
+
+    <button mat-stroked-button color="white" (click)="atualizar(critica.id, critica.nomeDoCritico || '', critica.mensagem || '')"  class="button-footer" >
+      ATUALIZAR CRITICA
+    </button>
   </mat-card-footer>
 </mat-card>
 
-<div class="button-section">
+<!-- <div class="button-section">
   <button mat-stroked-button [routerLink]="['/listar-critica']" class="text-button">
     MOSTRAR TODAS AS CRÍTICAS
   </button>
-</div>
+</div> -->

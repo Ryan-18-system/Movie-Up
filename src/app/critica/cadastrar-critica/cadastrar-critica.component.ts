@@ -40,4 +40,14 @@ export class CadastrarCriticaComponent implements OnInit {
     this.critica = new Critica()
   }
 
+  atualizar(id: number = Number(this.idFilme) , nomeDoCritico: string, mensagem: string ): void {
+    this.criticaService.atualizar(id, nomeDoCritico, mensagem).subscribe(
+      critica => {
+        this.mensagemService.success("Crítica atualizada com sucesso")
+        console.log(critica)
+        console.log(id)
+      }
+      )
+  }
+
 }
