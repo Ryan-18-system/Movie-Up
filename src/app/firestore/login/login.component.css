@@ -1,0 +1,25 @@
+.img-logo h3{
+  margin-top: 20px;
+  font-size: 22px;
+  color: whitesmoke;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+
+.form{
+  margin: 50px 30px 40px 30px;
+  padding-bottom: 5px;
+
+}
+
+.form form{
+  padding-top: 2px;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-login{
+  width: 300px;
+  color: whitesmoke;
+}
+
