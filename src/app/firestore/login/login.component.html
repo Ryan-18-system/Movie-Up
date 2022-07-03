@@ -1,14 +1,18 @@
 <div class="form">
   <form [formGroup]="formLogin" (ngSubmit)="login()">
-    <mat-form-field class="" appearance="fill">
+    <h1> Seja Bem-Vindo</h1>
+    <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
       <input formControlName="email" matInput type="email">
     </mat-form-field>
 
-    <mat-form-field class="" appearance="fill">
+    <mat-form-field  appearance="outline">
       <mat-label>Senha</mat-label>
       <input formControlName="senha" matInput type="password">
     </mat-form-field>
-    <button mat-flat-button color="primary" type="submit" [disabled]="formLogin.invalid">Login</button>
+
+    <div class="button">
+      <button mat-flat-button color="accent" type="submit" [disabled]="formLogin.invalid">Login</button>
+    </div>
   </form>
 </div>
