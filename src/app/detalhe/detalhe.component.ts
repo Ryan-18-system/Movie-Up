@@ -76,15 +76,6 @@ export class DetalheComponent implements OnInit {
     )
   }
 
-  atualizar(id: number = Number(this.idFilme) , nomeDoCritico: string, mensagem: string ): void {
-    this.criticaService.atualizar(id, nomeDoCritico, mensagem).subscribe(
-      critica => {
-        this.mensagemService.success("Crítica atualizada com sucesso")
-        console.log(critica)
-        console.log(id)
-      }
-      )
-    this.critica = new Critica()
-  }
+
 
 }
