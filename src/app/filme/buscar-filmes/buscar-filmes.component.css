@@ -39,6 +39,8 @@
   width: 150px;
 }
 
-.footer-card{
-
+.btn-saibamais{
+  position:absolute;
+  bottom:3%;
+  left: 20%;
 }

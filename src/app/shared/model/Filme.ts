@@ -4,6 +4,7 @@ export class Filme{
   id?: number;
   titulo?: string;
   imagem?: string;
+  imagemhr?: string;
   dataLancamento?: number;
   sinopse?:string;
   genero?: string;
@@ -23,6 +24,7 @@ export class Filme{
     this.id = id;
     this.titulo = filme.titulo;
     this.imagem = filme.imagem;
+    this.imagemhr = filme.imagemhr;
     this.dataLancamento = filme.dataLancamento;
     this.sinopse = filme.sinopse;
     this.genero = filme.genero;

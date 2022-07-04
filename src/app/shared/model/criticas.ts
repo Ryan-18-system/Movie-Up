@@ -5,7 +5,6 @@ export class Critica {
   mensagem?: string;
   nomeDoCritico?: string;
   id_filme?: number;
-  critica?: Array<Critica>;
   filme?: Array<Filme>;
 
   constructor(id?: number, critica: Critica = {}) {
@@ -13,7 +12,6 @@ export class Critica {
     this.mensagem = critica.mensagem;
     this.nomeDoCritico = critica.nomeDoCritico;
     this.id_filme = critica.id_filme;
-    this.critica = critica.critica;
     this.filme = critica.filme
   }
 

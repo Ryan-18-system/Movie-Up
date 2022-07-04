@@ -10,26 +10,22 @@ import { FilmeService } from 'src/app/shared/service/filmes.service';
 })
 export class HomeComponent implements OnInit {
 
-  filmes: Array<Filme> = [];
+  filmesEmAlta: Array<Filme> = [];
+  filmesFavoritos: Array<Filme> = [];
+
   detalhes!: Filme;
 
-
-  favoritos = [
-    {imagem: 'https://www.themoviedb.org/t/p/original/rvtdN5XkWAfGX6xDuPL6yYS2seK.jpg'},
-    {imagem: 'https://www.themoviedb.org/t/p/original/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg'},
-    {imagem: 'https://www.themoviedb.org/t/p/original/xvIAeAyXakMHPOgU7URp1kqKQZI.jpg'},
-  ]
 
   constructor(private filmeService: FilmeService, private roteador: Router) {
   }
 
   ngOnInit(): void {
     this.filmeService.listarFavoritos().subscribe(
-      filmes => this.filmes = filmes
+      filmes => this.filmesFavoritos = filmes
     )
 
     this.filmeService.listarEmalta().subscribe(
-      filmes => this.filmes = filmes
+      filmes => this.filmesEmAlta = filmes
     );
 
   }

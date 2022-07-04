@@ -11,7 +11,6 @@ import {Observable} from 'rxjs';
 
 export class CriticasService {
   URL_CRITICAS_FILME = 'http://localhost:8082/filmes/criticas';
-  URL_CRITICAS_SERIE = 'http://localhost:8082/series/criticas';
   URL_FILME = 'http://localhost:8082/filmes';
 
 
@@ -47,7 +46,7 @@ export class CriticasService {
     return this.httpClient.put<Critica>(`${this.URL_CRITICAS_FILME}/${id}`, criticaObj);
   }
 
-  remover(id_filme: number, id: number): Observable<Object>{
-    return this.httpClient.delete(`${this.URL_FILME}/${id_filme}/criticas/${id}`);
+  remover(id: number): Observable<Object>{
+    return this.httpClient.delete(`${this.URL_CRITICAS_FILME}/${id}`);
   }
 }

@@ -33,7 +33,7 @@ export class CadastrarCriticaComponent implements OnInit {
     this.criticaService.inserir(id, nomeDoCritico, mensagem).subscribe(
       critica => {
         this.mensagemService.success("Crítica cadastrada com sucesso")
-        console.log(critica)
+        console.log(critica.filme)
         console.log(id)
       }
       )

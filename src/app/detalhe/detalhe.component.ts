@@ -48,8 +48,8 @@ export class DetalheComponent implements OnInit {
     this.filmeService.listarById(id).subscribe(
       filmes => {
         this.filme = filmes
-        console.log(filmes)
         this.roteador.navigate(['detalhes', id])
+
       }
     )
   }
@@ -58,14 +58,15 @@ export class DetalheComponent implements OnInit {
     this.criticaService.listar(id).subscribe(
       critica =>
       {this.criticas = critica
-        console.log(critica)}
+        console.log(this.critica)
+      }
     )
   }
 
   remover(id: number): void {
-    this.criticaService.remover(Number(this.idFilme), id).subscribe(
+    this.criticaService.remover(id).subscribe(
       resposta => {
-        const indxCriticaARemover = this.criticas.findIndex(u => u.id === this.criticas[0].id);
+        const indxCriticaARemover = this.criticas.findIndex(c => c.id === this.criticas[0].id);
 
         if (indxCriticaARemover > -1) {
           this.criticas.splice(indxCriticaARemover, 1);
