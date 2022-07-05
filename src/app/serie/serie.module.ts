@@ -1,3 +1,5 @@
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -26,6 +28,8 @@ import { LancamentosComponent } from './lancamentos/lancamentos.component';
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
+    MatCardModule
   ],
   exports: [
     BuscarSeriesComponent,

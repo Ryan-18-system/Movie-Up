@@ -1,23 +1,26 @@
 .detalhe{
   margin-top: 50px;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .sinopse{
   padding-top: 10px;
 
 }
 .informacoes{
-
   display: flex;
   flex-direction: row;
 }
+
 img{
   padding-right: 10px;
 }
 .mat-card-listagem{
   width: 480px;
-  height: 480px;
-  background-color:#320443;
+  height: 400px;
+  background-color:#4758a8;
   margin-left: 20px ;
   margin-top: 10px;
   padding: 10px;
@@ -34,4 +37,60 @@ img{
 }
 .estrelas input[type=radio]:checked ~ label i.fa:before {
   color: #CCC;
+}
+
+.btn-critica{
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ae53a0;
+  margin-top: 20px;
+  margin-left: 15px;
+  color: black;
+  border: 1px solid black;
+}
+
+
+.mat-card-criticas{
+  width: 500px;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color:#4758a8;
+  margin-right: 60px;
+}
+
+.criticas-title{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.criticas-div{
+  margin-top:20px;
+  background-color: #ffffff;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-radius: 8px;
+  border-radius: 1px solid black;
+}
+.nomecritico{
+  font-size: 20px;
+  color: rgb(112, 112, 112);
+}
+.texto{
+  font-size: 20px;
+  color: black;
+}
+
+
+.actions{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-right: 15px;
+}
+
+.actions button{
+  margin-left: 6px;
+  background-color: #ae53a0;
+  color: white;
 }

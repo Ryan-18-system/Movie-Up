@@ -1,23 +1,24 @@
 <div class="detalhe">
-  <mat-card  *ngFor="let d of filmes" class="mat-card-listagem">
-    <mat-card-header>
-      <mat-card-title class="mat-card-title">{{d.titulo}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div class="informacoes">
-        <img src="{{d.imagem}}" width="180" height="180">
-        <div>
-          <p>Data de Lançamento: {{d.dataLancamento}}</p>
-          <p>Duração: {{d.duracao}}</p>
-          <p>Gênero: {{d.genero}}</p>
-          <p> Elenco: {{d.atores}}</p>
-          <p>Diretor: {{d.diretor}}</p>
+  <div>
+    <mat-card class="mat-card-listagem">
+      <mat-card-header>
+        <mat-card-title class="mat-card-title">{{filme.titulo | titlecase}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="informacoes">
+          <img src="{{filme.imagem}}" width="180" height="180" alt="imagem filme">
+          <div>
+            <p>Data de Lançamento: {{filme.dataLancamento}}</p>
+            <p>Duração: {{filme.duracao}}</p>
+            <p>Gênero: {{filme.genero}}</p>
+            <p>Elenco: {{filme.atores}}</p>
+            <p>Diretor: {{filme.diretor}}</p>
+          </div>
         </div>
-      </div>
-      <div  class="sinopse">
-        <span>Sinopse: {{d.sinopse}}</span>
-      </div>
-    </mat-card-content>
+        <div class="sinopse">
+          <span>Sinopse: {{filme.sinopse}}</span>
+        </div>
+      </mat-card-content>
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
       <div class="estrelas">
         <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
@@ -32,5 +33,24 @@
         <label for="cm_star-5"><i class="fa"></i></label>
         <input type="radio" id="cm_star-5" name="fb" value="5"/>
       </div>
-  </mat-card>
+      <mat-card-footer>
+        <button mat-button class="btn-critica" [routerLink]="['/criticas', filme.id]">Adicionar crítica</button>
+        <button mat-button class="btn-critica" (click)="listarCriticas(filme.id || 0)">Listar críticas</button>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+  <div class="listagem-criticas">
+    <mat-card class="mat-card-criticas">
+      <mat-card-title class="criticas-title">Críticas</mat-card-title>
+      <div *ngFor="let c of criticas" class="criticas-div">
+        <mat-card-subtitle class="nomecritico">Crítico: {{c.nomeDoCritico | titlecase}}</mat-card-subtitle>
+        <mat-card-content class="texto">{{c.mensagem}}</mat-card-content>
+        <mat-card-actions class="actions">
+          <button mat-mini-fab  (click)="remover(c.id || 0)"><mat-icon class="lixo">delete</mat-icon></button>
+          <button mat-mini-fab  [routerLink]="['/atualizar-critica', c.id]"><mat-icon class="att">edit</mat-icon></button>
+
+        </mat-card-actions>
+      </div>
+    </mat-card>
+  </div>
 </div>

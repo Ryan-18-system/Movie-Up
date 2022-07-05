@@ -1,1 +1,22 @@
-<p>buscar-series works!</p>
+<div class="form-search">
+  <mat-form-field appearance="fill" class="search"  >
+    <mat-label>Buscar Series</mat-label>
+    <div class="busca">
+      <input matInput #serie >
+      <button mat-icon-button class="btn-search" (click)="buscarSerie(serie.value)"><mat-icon>search</mat-icon></button>
+    </div>
+  </mat-form-field>
+  <div class="cards">
+    <mat-card *ngFor="let serie of series" class="mat-card">
+        <mat-card-title class="titulo">{{serie.titulo | titlecase}}</mat-card-title>
+        <mat-card-content class="imagem">
+          <img src="{{serie.imagem}}" width="170" height="200" alt="imagem serie">
+        </mat-card-content>
+        <mat-card-footer class="footer-card">
+          <button mat-button class="detalhes" color="primary" [routerLink]="['/detalhes']">SAIBA MAIS</button>
+
+        </mat-card-footer>
+    </mat-card>
+  </div>
+</div>
+

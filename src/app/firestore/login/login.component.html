@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="img-logo" fxLayout="column" fxLayoutAlign="center center">
+  <img src="assets/logomovie.png" width="80" height="100">
+  <h3>LOGIN</h3>
+</div>
+<div class="form" fxLayout="column" fxLayoutAlign="center center">
+  <form [formGroup]="formLogin" (ngSubmit)="login()">
+    <h1> Seja Bem-Vindo</h1>
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput type="email">
+    </mat-form-field>
+
+    <mat-form-field  appearance="outline">
+      <mat-label>Senha</mat-label>
+      <input formControlName="senha" matInput type="password">
+    </mat-form-field>
+
+    <div class="button">
+      <button mat-flat-button color="accent" type="submit" [disabled]="formLogin.invalid">Login</button>
+    </div>
+  </form>
+</div>

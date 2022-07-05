@@ -1,0 +1,44 @@
+.form-search{
+  text-align: center;
+  margin-top: 50px;
+}
+.busca{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.btn-search{
+  color: #fff;
+
+}
+
+.cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 8px;
+  margin: 5px;
+  justify-content: center;
+}
+
+.mat-card{
+  height: 300px;
+  width: 200px;
+  background-color: #4758a8;
+
+}
+
+.titulo{
+  font-size: 18px;
+}
+.detalhes{
+  background-color: #FFCC00;
+  width: 150px;
+}
+
+.footer-card{
+
+}

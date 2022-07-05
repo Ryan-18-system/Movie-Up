@@ -2,7 +2,7 @@
 
 <mat-grid-list cols="4" rowHeight="1:1">
   <mat-grid-tile *ngFor="let card of filmes" >
-    <img src="{{card.imagem}}" width="280" height="300">
+    <img src="{{card.imagem}}"  width="350" height="400" (click)="listarById(card.id || 0)">
   </mat-grid-tile>
 
 </mat-grid-list>

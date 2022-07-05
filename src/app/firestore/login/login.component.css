@@ -1,0 +1,35 @@
+.form{
+  display:flex;
+  justify-content: center;
+  margin: 80px 0;
+}
+
+.img-logo h3{
+  margin-top: 20px;
+  font-size: 22px;
+  color: whitesmoke;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+
+
+.form form{
+  max-width: 80%;
+  background-color: #7100A7;
+  border-radius: 20px;
+  padding: 36px 64px;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
+
+}
+mat-form-field {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.button{
+  display: flex;
+  justify-content: center;
+}
+form h1{
+  text-align: center;
+  color: white;
+}

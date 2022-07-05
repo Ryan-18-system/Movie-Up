@@ -3,7 +3,6 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CadastrarCriticaComponent } from './cadastrar-critica/cadastrar-critica.component';
-import { ListarCriticaComponent } from './listar-critica/listar-critica.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
@@ -15,10 +14,7 @@ import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
-    CadastrarCriticaComponent,
-    ListarCriticaComponent,
-
-  ],
+    CadastrarCriticaComponent],
     imports: [
         BrowserAnimationsModule,
         CommonModule,
@@ -35,6 +31,6 @@ import {MatSelectModule} from "@angular/material/select";
 
     ],
   exports: [ CadastrarCriticaComponent,
-    ListarCriticaComponent]
+    ]
 })
 export class CriticaModule { }

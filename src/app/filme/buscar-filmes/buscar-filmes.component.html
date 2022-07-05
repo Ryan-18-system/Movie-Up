@@ -13,7 +13,7 @@
           <img src="{{filme.imagem}}" width="170" height="200">
         </mat-card-content>
         <mat-card-footer class="footer-card">
-          <button mat-button class="detalhes" color="primary" [routerLink]="['/detalhes']">SAIBA MAIS</button>
+          <button class="btn-saibamais" mat-button class="detalhes" color="primary" (click)="listarById(filme.id || 0)">SAIBA MAIS</button>
 
         </mat-card-footer>
     </mat-card>

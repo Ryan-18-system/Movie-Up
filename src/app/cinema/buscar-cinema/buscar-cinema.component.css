@@ -10,7 +10,6 @@
   text-align: center;
   color: #fff;
   font-family: 'Montserrat', 'Open Sans', sans-serif;
-
 }
 
 
@@ -26,17 +25,20 @@
 
 .cards{
   width: 250px;
-  height: 120px;
+  height: 130px;
   margin-top: 5px;
   background-color: #4758a8;
+  align-items: center;
 }
 
 .btn-comprar{
-  padding: 8px;
+  padding: 10px;
   border-radius: 5px;
   background-color: #ae53a0;
-  margin-left: 10px;
-  margin-top: 20px;
+  position:absolute;
+  bottom:4%;
+  left: 20%;
+
 }
 .btn-comprar a{
   text-decoration: none;

@@ -1,5 +1,4 @@
 import { CadastrarCriticaComponent } from './critica/cadastrar-critica/cadastrar-critica.component';
-import { ListarCriticaComponent } from './critica/listar-critica/listar-critica.component';
 import { MaisEsperadosComponent } from './filme/mais-esperados/mais-esperados.component';
 import { AclamadosPelaCriticaComponent } from './filme/aclamados-pela-critica/aclamados-pela-critica.component';
 import { FilmesDaSemanaComponent } from './filme/filmes-da-semana/filmes-da-semana.component';
@@ -16,8 +15,9 @@ import { LancamentosComponent } from './serie/lancamentos/lancamentos.component'
 import { VencedorasComponent } from './serie/vencedoras/vencedoras.component';
 import {CadastroComponent} from "./firestore/cadastro/cadastro.component";
 import {LoginComponent} from "./firestore/login/login.component";
+import {AngularFireAuthGuard, redirectUnauthorizedTo} from "@angular/fire/auth-guard";
 
-
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 const routes: Routes = [
   {
   path:'',
@@ -36,12 +36,16 @@ const routes: Routes = [
     component: MaisEsperadosComponent
   },
   {
-    path:'listar-critica',
-    component: ListarCriticaComponent
-  },
-  {
-    path:'cadastrar-critica',
-    component: CadastrarCriticaComponent
+    path:'criticas/:id',
+    component: CadastrarCriticaComponent,
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectUnauthorizedToLogin }
+
+  },{
+    path:'atualizar-critica/:id',
+    component: CadastrarCriticaComponent,
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectUnauthorizedToLogin }
   },
   {
     path:'detalhes/:id',
@@ -69,7 +73,7 @@ const routes: Routes = [
   },
   {
     path: 'buscar-cinema',
-    component: BuscarCinemaComponent
+    component: BuscarCinemaComponent,
   },
   {
     path: 'cadastro',
