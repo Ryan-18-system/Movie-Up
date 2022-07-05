@@ -26,12 +26,10 @@ export class CriticasService {
   //post
   inserir(id: number, nomeDoCritico: string, mensagem: string): Observable<Critica> {
 
-    const criticaObj = {
-      nomeDoCritico: nomeDoCritico,
-      mensagem: mensagem
-    };
+    const criticaObj = {"nomeDoCritico": nomeDoCritico, "mensagem": mensagem}
 
-    JSON.stringify(criticaObj);
+    //const teste = JSON.stringify(criticaObj)
+
 
     return this.httpClient.post<Critica>(`${this.URL_CRITICAS_FILME}/${id}`, criticaObj);
   }
