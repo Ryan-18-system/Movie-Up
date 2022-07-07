@@ -9,7 +9,5 @@ export class Cidade {
     this.uf = cidade.uf;
     this.id = cidade.id;
     this.name = cidade.name
-
-
   }
 }

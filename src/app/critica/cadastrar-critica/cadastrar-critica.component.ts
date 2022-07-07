@@ -33,19 +33,17 @@ export class CadastrarCriticaComponent implements OnInit {
     this.criticaService.inserir(id, nomeDoCritico, mensagem).subscribe(
       critica => {
         this.mensagemService.success("Crítica cadastrada com sucesso")
-        console.log(critica.filme)
-        console.log(id)
+
       }
       )
     this.critica = new Critica()
   }
 
-  atualizar(id: number = Number(this.idFilme) , nomeDoCritico: string, mensagem: string ): void {
+  atualizar(id: number = Number(this.idFilme) , nomeDoCritico: string, mensagem: string ){
     this.criticaService.atualizar(id, nomeDoCritico, mensagem).subscribe(
       critica => {
-        this.mensagemService.success("Crítica atualizada com sucesso")
-        console.log(critica)
-        console.log(id)
+        return this.mensagemService.success("Crítica atualizada com sucesso")
+
       }
       )
   }
